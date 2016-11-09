@@ -2,8 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	margin: 0 !important;
+}
+
 .fixed {
   border-bottom: 1px solid #dadada;
+  .top-bar {
+  	margin-left: 3em;
+  	margin-right: 3em;
+  }
+}
+
+.social-list {
+ 	display: table;
+ 	margin: 0 auto;
+ 	padding: 1em 0;
+ 	font-size: 2em;
+ 	.fi-social-twitter {
+ 		color: #1da1f2;
+ 		&:hover {
+ 			color: #1da1f2;
+ 			background-color: inherit;
+ 		}
+ 	}
+ 	.fi-social-linkedin {
+ 		color: #1884bb;
+ 		&:hover {
+ 			color: #1884bb;
+ 			background-color: inherit;
+ 		}
+ 	}
+ 	.fi-social-github {
+ 		color: #333;
+ 		&:hover {
+ 			color: #333;
+ 			background-color: inherit;
+ 		}
+ 	}
+}
+
+.body_wrapper {
+	margin-left: 3em;
+  margin-right: 3em;
+  margin-bottom: 3em;
+}
+.row {
+	max-width: 100%
 }
 
 .greyish {
@@ -14,14 +59,10 @@
 	color: #999999
 }
 
-
-.body_wrapper {
-	margin: 1em 3em;
+.footer {
+	border-top: 1px solid #dadada;
 }
 
-.row {
-  max-width: 100%;
-}
 
 .project_thumbnail_wrapper {
 	.project_title {
@@ -29,3 +70,4 @@
 		border: 1px solid #dadada;
 	}
 }
+

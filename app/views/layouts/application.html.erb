@@ -13,38 +13,48 @@
   </head>
 
   <body>
-      
-      <div class="fixed">
-        <nav class="top-bar" data-topbar role="navigation">
-          <ul class="title-area">
-            <li class="name">
-              <h1><a href="#">My Site</a></h1>
-            </li>
-             <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  
+    <div class="fixed">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">My Site</a></h1>
+          </li>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <!-- Right Nav Section -->
+          <ul class="right">
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">RESUME</a></li>
+            <li><a href="http://blog.ethigeek.com">BLOG</a></li>
+            <li><a href="#">CONTACT</a></li>
           </ul>
 
-          <section class="top-bar-section">
-            <!-- Right Nav Section -->
-            <ul class="right">
-              <li><a href="#">PORTFOLIO</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">RESUME</a></li>
-              <li><a href="http://blog.ethigeek.com">BLOG</a></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-
-          </section>
-        </nav>
+        </section>
+      </nav>
+    </div>
+    <div class="body_wrapper">
+      <div class="row">
+        <div class="large-12 columns">
+          <%= yield %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="body_wrapper">
-    <div class="row ">
-      <div class="large-12 columns">
-        <%= yield %>
+    <div class="footer">
+      <div class="row">
+        <div class="large-12 columns text-center">
+        <ul class="inline-list social-list">
+          <li><a class="fi-social-github" href="https://github.com/ethirajsrinivasan"></a></li>
+          <li><a class="fi-social-twitter" href="https://twitter.com/iamethi"></a></li>
+          <li><a class="fi-social-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
+        </ul>
+        </div>
       </div>
     </div>
-  </div>
+    
   </body>
 </html>
