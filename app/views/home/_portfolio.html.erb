@@ -1,0 +1,55 @@
+<div class="show-for-large-only">
+	<% @projects.each_slice(3) do |projects| %>
+		<div class="row">
+			<% projects.each do |project| %>
+				<div class="large-4 columns left">
+					<div class="project_thumbnail_wrapper">
+						<%= image_tag("project_sample.svg",size: "600") %>
+						<div class="project_title">
+							<%= project.title.titleize %>
+							<br>
+							<div class="greyish-light">Description</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<br>
+	<% end	%>
+</div>
+<div class="show-for-medium-only">
+	<% @projects.each_slice(2) do |projects| %>
+		<div class="row">
+			<% projects.each do |project| %>
+				<div class="medium-6 columns">
+					<div class="project_thumbnail_wrapper">
+						<%= image_tag("project_sample.svg",size: "600") %>
+						<div class="project_title">
+							<%= project.title.titleize %>
+							<br>
+							<div class="greyish-light">Description</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<br>
+	<% end	%>
+</div>
+<div class="show-for-small-only">
+	<% @projects.each do |project| %>
+		<div class="row">
+			<div class="small-12 columns">
+				<div class="project_thumbnail_wrapper">
+						<%= image_tag("project_sample.svg",size: "600") %>
+						<div class="project_title">
+							<%= project.title.titleize %>
+							<br>
+							<div class="greyish-light">Description</div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<br>
+	<% end %>
+</div>
