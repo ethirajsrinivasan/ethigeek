@@ -3,11 +3,11 @@
 <div class="body_wrapper">
   <div class="row">
   	<div class="large-12 columns">
-  		<h1 class="about-header">About</h1>
+  		<h1 class="about-header"><%= @project.title.titleize %></h1>
       <section>
         <div class="section-heading"></div>
         <div class="section-body">
-          <h3>I'm a Full stack developer. I create digital experiences that make sense and delight users.
+          <h3><%= @project.description %>
           </h3>
         </div>
       </section>

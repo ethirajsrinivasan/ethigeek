@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/portfolio", to: "home#portfolio"
   get "/contact", to: "home#contact"
   get "/about", to: "home#about"
+  get "/portfolios/:id", to: "home#show", as: 'portfolios'
 end

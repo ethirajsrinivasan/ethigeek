@@ -37,7 +37,7 @@ body {
 }
 
 .intro-description {
-	padding: 1em 0;
+	padding: 1em 0 2em 0;
 }
 
 .section-body {
@@ -54,6 +54,12 @@ body {
 	}
 
 }
+
+.about-header {
+	margin: -2.5em 0em 1em 3.4em;
+	color: white;
+}
+
 
 section {
 	width: 75%;
@@ -80,6 +86,57 @@ section {
 	}
 }
 
+.github-chart {
+	padding: 1em 0 1em 1em;
+}
+
+.now-card {
+	padding: 1.25em;
+  width: 90%;
+  margin: 0;
+  border-radius: 4px;
+  text-align: center;
+  background: #efefef;
+  border: 1px solid #dddddd;
+  margin-bottom: 1em;
+
+  img {
+  	max-height: 7.5em;
+    margin: 0 auto;
+    border: 1px solid #DCDCDC;
+  }
+  .now-card-subtitle {
+  	font-size: 15px;
+    font-weight: 300;
+    margin-top: 11px;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .now-card-desc {
+  	margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(47,43,43,.61);
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.now-card .now-card-title {
+	text-transform: uppercase;
+  font-size: 14px;
+  color: #888;
+  font-weight: 700;
+  margin: 0 0 15px;
+  letter-spacing: 3px;
+}
+
 @media only screen and (max-width: 64em) {
 	.about {
 		background-color: #4a89dc;
@@ -98,6 +155,7 @@ section {
 		padding-top: .5em;
 	}
 
+
 	.section-body {
 		padding-left: 0;
 		padding-top: .5em;
@@ -115,6 +173,9 @@ section {
 		padding-top: 1em;
 	}
 
+	.about-header {
+		margin: -2.5em 0 .5em 0 ;
+	}
 }
 
 .about-banner {
@@ -122,9 +183,6 @@ section {
 	background-image: url('about-banner.png');
 }
 
-.about-header {
-	margin: -2em 0em 0em 1em;
-}
 
 .contact_mail {
 	color: #222;
@@ -197,6 +255,11 @@ section {
 	.fixed .top-bar {
 	margin: 0em 0em;
 	}
+
+	.now-card {
+		width: 100%;
+		
+	}
 }
 .row {
 	max-width: 100%
@@ -205,6 +268,7 @@ section {
 .greyish {
 	color: #888
 }
+
 
 .greyish-light {
 	color: #999999
@@ -216,6 +280,9 @@ section {
 
 
 .project_thumbnail_wrapper {
+  a:visited {
+  	color: black;
+  }
 	.project_title {
 		padding: .5em;
 		border: 1px solid #dadada;

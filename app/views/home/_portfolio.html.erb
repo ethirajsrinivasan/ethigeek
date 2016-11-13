@@ -4,12 +4,14 @@
 			<% projects.each do |project| %>
 				<div class="large-4 columns left">
 					<div class="project_thumbnail_wrapper">
-						<%= image_tag("project_sample.svg",size: "600") %>
-						<div class="project_title">
-							<%= project.title.titleize %>
-							<br>
-							<div class="greyish-light">Description</div>
-						</div>
+						<%= link_to portfolios_path(id: project.id)  do %>
+							<%= image_tag("project_sample.svg",size: "600") %>
+							<div class="project_title">
+								<%= project.title.titleize %>
+								<br>
+								<div class="greyish-light">Description</div>
+							</div>
+						<% end %>
 					</div>
 				</div>
 			<% end %>
