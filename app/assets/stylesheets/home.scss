@@ -46,11 +46,30 @@ body {
 	font-size: 1.15em;
 	color: #555;
 	padding-left: 10em;
+	padding-bottom: 1em;
 	text-align: justify;
-
+	ol {
+		margin-top: 1em;
+		li {
+			padding: .3em 0
+		}
+	}
+	a {
+	 color: #008CBA !important
+	}
 	li {
 		font-size: 1.18em;
     font-weight: 200;
+	}
+	.project_links {
+		background-color: #e7e7e7;
+		h5 {
+			padding: 1em 0 0 1em;
+			font-weight: normal;
+		}
+		ol {
+			padding-bottom: 1em;
+		}
 	}
 
 }
@@ -58,6 +77,12 @@ body {
 .about-header {
 	margin: -2.5em 0em 1em 3.4em;
 	color: white;
+}
+
+.project_thumbnail {
+	height: 20em;
+	background: center center/cover no-repeat;
+	border: 1px solid #dadada;
 }
 
 
@@ -149,6 +174,12 @@ section {
 			display: inline;
 		}
 	}
+
+	.metadata {
+		dd:after {
+    	content: ', ';
+    }
+  }
 
 	.section-heading {
 		float: none;
