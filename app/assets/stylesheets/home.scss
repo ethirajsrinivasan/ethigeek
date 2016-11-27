@@ -48,7 +48,7 @@ body {
 	padding-left: 10em;
 	padding-bottom: 1em;
 	text-align: justify;
-	ol {
+	ol, ul {
 		margin-top: 1em;
 		li {
 			padding: .3em 0
@@ -82,7 +82,6 @@ body {
 .project_thumbnail {
 	height: 20em;
 	background: center center/cover no-repeat;
-	border: 1px solid #dadada;
 }
 
 
@@ -92,7 +91,6 @@ section {
 
 .about {
 	float: right;
-	background-color: #4a89dc;
 	color: white;
 	width: 240px;
 	padding: 2em 2em 0 2em;
@@ -211,7 +209,7 @@ section {
 
 .about-banner {
 	background: 50% 50% / cover no-repeat transparent;
-	background-image: url('about-banner.png');
+	height: 380px;
 }
 
 
@@ -226,6 +224,11 @@ section {
 			color: #e24500;
 		}
 	}
+	padding-bottom: 1em;
+}
+
+.home-icon {
+	font-size: 2em;
 }
 
 .buttons a {
@@ -317,6 +320,7 @@ section {
 	.project_title {
 		padding: .5em;
 		border: 1px solid #dadada;
+		border-top: 0;
 	}
 }
 

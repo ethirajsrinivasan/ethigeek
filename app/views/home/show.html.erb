@@ -1,5 +1,4 @@
-<div class="about-banner" style="height:380px">
-</div>
+<div class="about-banner" style="background-image: url(<%="#{@project.image_url}"%>)"></div>
 <div class="body_wrapper">
   <div class="row">
   	<div class="large-12 columns">
@@ -15,7 +14,7 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <aside class="about">
+      <aside class="about" style="background-color: <%= @project.color %>">
         <%= render "metadata", attribute: @project.duration, title: "Date" %>
         <%= render "metadata", attribute: @project.role, title: "Role" %>
         <%= render "metadata", attribute: @project.tools, title: "Tools " %>

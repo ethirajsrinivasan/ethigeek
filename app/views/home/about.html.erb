@@ -1,5 +1,5 @@
-<div class="about-banner" style="height:380px">
-</div>
+<% content_for :title, "About" %>
+<div class="about-banner" style="background-image: url(<%="#{Project.first.image_url}"%>)"></div>
 <div class="body_wrapper">
   <div class="row">
   	<div class="large-12 columns">
@@ -7,7 +7,7 @@
       <section>
         <div class="section-heading"></div>
         <div class="section-body">
-          <h3>I'm a Full stack developer. I create digital experiences that make sense and delight users.
+          <h3>I'm a Pragmatic, Passionate, Full stack developer. I love building great products on the web.
           </h3>
         </div>
       </section>
@@ -16,91 +16,67 @@
   <div class="row">
     <div class="large-12 columns">
       <aside class="about">
-        <dl class="metadata"><dt>Skills</dt>
-          <dd>User research</dd>
-          <dd>Usability testing</dd>
-          <dd>User scenarios</dd>
-          <dd>Persona creation</dd>
-          <dd>Wireframing</dd>
-          <dd>Visual design</dd>
-          <dd>Front-end development</dd>
-          <dd>Rapid prototyping</dd>
-          <dd>Accessibility</dd>
-          <dd>Information visualization</dd>
-        </dl>
-        <dl class="metadata"><dt>Design Tools</dt>
-          <dd>Pen &amp; Paper</dd>
-          <dd>Sketch</dd>
-          <dd>Adobe Photoshop</dd>
-          <dd>Adobe Illustrator</dd>
-        </dl>
-        <dl class="metadata"><dt>Prototyping Tools</dt>
-          <dd>HTML, CSS &amp; JS</dd>
-          <dd>Framer.js</dd>
-          <dd>inVision</dd>
-          <dd>Pixate</dd>
-          <dd>AxureRP</dd>
-          <dd>After effects</dd>
-        </dl>
-        <dl class="metadata"><dt>Dev Tools</dt>
-          <dd>HTML &amp; CSS</dd>
-          <dd>JavaScript</dd>
-          <dd>Angular, React, Ember, D3</dd>
+        <dl class="metadata"><dt>Languages</dt>
+          <dd>Ruby</dd>
+          <dd>Java</dd>
           <dd>Node.js</dd>
-          <dd>Ruby on Rails</dd>
-          <dd>Git</dd>
-          <dd>Grunt, bower, yeoman</dd>
         </dl>
-        <dl class="metadata"><dt>Gadgets</dt>
-          <dd>MacBook Pro</dd>
-          <dd>Nexus 5</dd>
-          <dd>Arduino Uno</dd>
-          <dd>Nikon D5500</dd>
+        <dl class="metadata"><dt>Web Development</dt>
+          <dd>HTML</dd>
+          <dd>CSS</dd>
+          <dd>Javascript</dd>
+          <dd>Jquery</dd>
+          <dd>Coffeescript</dd>
+        </dl>
+        <dl class="metadata"><dt>Database Management</dt>
+          <dd>Postgres</dd>
+        </dl>
+        <dl class="metadata"><dt>Framework</dt>
+          <dd>Ruby on Rails</dd>
+          <dd>Bootstrap</dd>
+          <dd>Foundation</dd>
+          <dd>Angular</dd>
+        </dl>
+        <dl class="metadata"><dt>Technologies</dt>
+          <dd>Redis</dd>
+          <dd>Memcached</dd>
+          <dd>Resque</dd>
+        </dl>
+        <dl class="metadata"><dt>Versioning Tools</dt>
+          <dd>Git</dd>
         </dl>
       </aside>
       <div class="section-content">
         <section>
           <div class="section-heading">Summary</div>
-          <div class="section-body">My name is Siddhartha Gudipati. I consider myself a FullStack Designer/UX Unicorn(research, user experience, interaction designer, and a front-end prototyper). I hold a degree both in Computer Science and Human-Centered Design and Engineering. I enjoy designing systems and delightful experiences around.
+          <div class="section-body">My name is Ethiraj. I consider myself a FullStack Developer. I enjoy developing great products and delightful experiences around.
           <br><br></div>
         </section>
         <section>
             <div class="section-heading">TL;DR</div>
             <div class="section-body tl-dr">
               <ul>
-                <li>I love designing products.</li>
-                <li>I have 3+ years experience in UX Design and Front-end Engineering.</li>
-                <li>I have degrees both in CS and HCI</li>
-                <li>I am a UX Unicorn</li>
-                <li>I am looking for a full time job</li>
+                <li>I love creating products.</li>
+                <li>I have 3+ years experience in Software Development Engineering.</li>
+                <li>I am a Full Stack Developer</li>
               </ul>
             </div>
         </section>
-        <section>
+        <!-- <section>
             <div class="section-heading">Story</div>
-            <div class="section-body">When I was doing my undergrad in Computer Science and Engineering one of my professors asked me build a site for an conference that was held in our college. It all started from there, I started loving designing websites and my CS course work gave me required skills to put my designs live. My genuine interest in understand people pushed me completely into designing products for that solves their day to day problems using design and tech. Seeing my passion my professor recommended me for different design project they came across. That led me to do many freelance projects and even run my own web design agency for a period. Taking my experience in design, I joining Web 2.0 Innovation labs, TCS Chennai as UX Designer. There I contributed to research, design, prototype, as well as front-end development for 3 years. However, I wanted to get more formal education in the user-centered design process for creating enhanced user experience. With this in mind, I joined Human-Centered Design and Engineering (HCDE) MS program at the University of Washington.
-            <br>
-            <br>
-            Having a Computer Science background, being a UX designer &amp; Front-end developer for 3+ years and a master’s degree in HCDE make me a UX Unicorn. Being a computer science engineer give me an edge over regular UX designer as I can talk to a developer in engineering term and also understand technology limitations. This makes me a critical and strong team member at times a bridge between designers and developers.
-              <br>I am looking forward to emerging my zeal for creating delightful and intuitive user experience design as well as interaction design.
-            <br>
-            <br>
-            Feel free to explore my LinkedIn account to learn more about my work and academic experience, or reach out to me directly via the email address me@websiddu.com.
-            <br>
-            <br>
-            </div>
-        </section>
+            <div class="section-body">
+        </section> -->
         <section>
             <div class="section-heading">Writing</div>
             <div class="section-body">
-            I write about life, technology and more. Here are some of my recent writings.
+            I write a tech blog to share my experiences. Here are some of my recent writings.
             <ol>
-              <li><a target="_blank" href="http://blog.websiddu.com/how-i-implemented-accessibility-for-my-portfolio-website/">How I implemented accessibility for my portfolio website?</a>
+              <li><a target="_blank" href="http://blog.ethigeek.com/Normalizing-Emails-for-Devise">Normalizing Emails for Devise</a>
               </li>
-              <li><a href="http://blog.websiddu.com/integrating-your-node-app-with-uw-saml/" target="_blank">Integrating node apps with UW's SAML</a>
+              <li><a href="http://blog.ethigeek.com/Mutually-Exclusive-Alias-Method-And-Prepend" target="_blank">Mutually Exclusive Alias Method And Prepend</a>
               </li>
             </ol>
-            Visit my personal <a href="http://blog.websiddu.com" target="_blank">blog</a> to see more posts.
+            Visit my personal <a href="http://blog.ethigeek.com" target="_blank">blog</a> to see more posts.
             <br>
             <br>
             </div>
@@ -110,40 +86,29 @@
             <div class="section-body">
               <div class="row">
                 <div class="large-4 medium-4 columns">
-                  <div class="now-card reading no-a-icon">
-                    <a target="_blank" class="no-icons" href="https://www.amazon.ca/Peak-Secrets-New-Science-Expertise/dp/0544456238">
+                  <div class="now-card">
+                    <a target="_blank" href="https://www.amazon.ca/Peak-Secrets-New-Science-Expertise/dp/0544456238">
                       <div>
                         <h3 class="now-card-title">NOW READING</h3>
                         <%= image_tag("peak.jpg") %>
                         <h5 class="now-card-subtitle">Hooked</h5>
-                        <p class="now-card-desc"><small class="muted">by</small> Anders Ericsson and Robert Pool</p>
+                        <p class="now-card-desc"><small>by</small> Anders Ericsson and Robert Pool</p>
                       </div>
                     </a>
                   </div>
                 </div>
                 <div class="large-4 medium-4 columns">
-                  <div class="now-card music">
-                    <h3 class="now-card-title">NOW PLAYING</h3>
-                    <div class="now-card-img">
-                      <!-- ngIf: music.image[3]['#text'] -->
-                      <!-- ngIf: !music.image[3]['#text'] --><img ng-src="images/no-cover.png" alt="" ng-if="!music.image[3]['#text']" class="ng-scope" src="images/no-cover.png">
-                      <!-- end ngIf: !music.image[3]['#text'] -->
-                      <a ng-href="" target="_blank">
-                        <div class="now-card-hover">
-                          <svg focusable="false" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg" class="icon-playbutton">
-                            <path class="_fill-color" d="M10.5 0C4.977 0 .5 4.477.5 10s4.477 10 10 10 10-4.477 10-10-4.477-10-10-10zm-2 14V6l6 4-6 4z" fill="#ffffff" fill-rule="evenodd" opacity="1"></path>
-                          </svg>
-                        </div>
-                      </a>
-                    </div>
-                    <h5 class="now-card-subtitle ng-binding" ng-bind-html="music.name"></h5>
-                    <p class="now-card-desc"><small class="muted">by</small> <span ng-bind-html="music.artist['#text']" class="ng-binding"></span>
+                  <div class="now-card">
+                    <h3 class="now-card-title">NOW WATCHING</h3>
+                    <%= image_tag("sherlock.jpg") %>
+                    <h5 class="now-card-subtitle">SHERLOCK HOLMES</h5>
+                    <p class="now-card-desc"><small>by</small> Mark Gatiss and Steven Moffat
                     </p>
                   </div>
                 </div>
                 <div class="large-4 medium-4 columns">
                   <div class="now-card learning">
-                    <a target="_blank" class="no-icons" href="http://elixir-lang.org/">
+                    <a target="_blank" href="http://elixir-lang.org/">
                     <h3 class="now-card-title">NOW LEARNING</h3>
                     <%= image_tag("elixir") %>
                     <h5 class="now-card-subtitle">Elixir App Development</h5>
@@ -156,10 +121,7 @@
         <section>
           <div class="section-heading">Hobbies</div>
           <div class="section-body">
-            I have many hobbies. If you ask me to name the top 3, I would say <a href="http://cook.websiddu.com" target="_blank">Cooking</a>, <a href="https://www.flickr.com/photos/websiddu" target="_blank">Photography</a> and <a href="https://dribbble.com/websiddu" target="_blank">Sketching</a>.<br>
-            <br>
-            I feel cooking helps me to sharpen my creativity. I cook Indian food mostly south Indian food. I also experiment by fusion of Indian, Chinese and American recipes. Checkout my cooking blog <a href="http://cook.websiddu.com" target="_blank">here</a>.<br><br>
-            I love photography, though I am an amateur some of the pictures that I took are appreciated by many. Checkout my photography skills <a href="https://www.flickr.com/photos/websiddu" target="_blank">here</a>.<br><br>
+            I love reading books on my leisure time.Checkout some of the books that i have read <a href="https://www.goodreads.com/user/show/59952899-ethiraj">here</a>
           </div>
         </section>
         <section>
@@ -170,15 +132,11 @@
             </div>
           </div>
         </section>
-        <section>
+<!--         <section>
           <div class="section-heading">About this site</div>
           <div class="section-body">
-            I hand-coded this website using different open source technologies like Angular.js, CSS, HTML, Ruby On Rails and Mongo DB. My primary goal is to utilize different open source free resource to build my portfolio. I wrote a detailed blogpost about how I built this website, don't forget to checkout the <a href="http://blog.websiddu.com/my-website-is-build-on-open-source/" target="_blank">blogpost here.</a>
-            <br>
-            <br>This website is completely <span class="text-normal">responsive and accessible</span>. I worked hard for making this website accessible. I wrote a <a href="http://blog.websiddu.com/how-i-implemented-accessibility-for-my-portfolio-website/" target="_blank">blogpost</a> about how I made my portfolio website accessible. Most of the development tasks are automated using grunt and python scripts. You can checkout the source code of my portfolio <a href="http://github.com/websiddu/websiddu" target="_blank">here</a>.<br><br>
-            <span class="text-normal">PS:</span> There are many hidden fun easter eggs in this site have fun finding them :)
           </div>
-        </section>
+        </section> -->
       </div>
     </div>
   </div>
