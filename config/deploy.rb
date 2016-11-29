@@ -73,7 +73,15 @@ namespace :deploy do
     end
   end
 
+  desc 'Copy ENV'
+  task :copy_env do
+    on roles(:app) do
+      execute :cp, shared_path.join('.env'), release_path.join('.env')
+    end
+  end
+
   before :starting,     :check_revision
+  after  :updating,     :copy_env
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart

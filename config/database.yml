@@ -26,6 +26,6 @@ test:
 production:
   <<: *default
   database: ethigeek_production
-  username: ethiraj
-  password: ethiraj@91
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
 
