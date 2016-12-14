@@ -11,6 +11,11 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def resume
+    data = open("https://assets-ethi.appspot.com/files/resume.pdf")
+    send_data(data.read, :type => 'application/pdf', :disposition => 'inline')
+  end
+
   def about
   end
 
