@@ -92,6 +92,7 @@ section {
 .about {
 	float: right;
 	color: white;
+	background-color: #4a89dc;
 	width: 240px;
 	padding: 2em 2em 0 2em;
 	border-radius: .25rem;
@@ -208,7 +209,7 @@ section {
 }
 
 .about-banner {
-	background: 50% 50% / cover no-repeat transparent;
+	background: image-url("about.svg") 50% 50% / cover no-repeat transparent;
 	height: 380px;
 }
 
