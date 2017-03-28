@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'foundation-rails', '~> 5.5', '>= 5.5.2.1'
 gem 'foundation-icons-sass-rails'
+gem "rails-settings-cached"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

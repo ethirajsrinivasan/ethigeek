@@ -1,4 +1,4 @@
-<%= link_to portfolios_path(id: project.id), target: "_blank"  do %>
+<%= link_to portfolios_path(title: project.title), target: "_blank"  do %>
 	<div class="project_thumbnail" style="background-image: url(<%="#{project.image_url}"%>)"></div>
 	<div class="project_title">
 		<%= project.title.titleize %>
