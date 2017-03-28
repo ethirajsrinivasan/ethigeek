@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :check_authorization
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
@@ -70,5 +71,9 @@ class ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit(Project.column_names.map(&:to_sym))
+    end
+
+    def check_authorization
+      redirect_to :root unless Setting.project_page_enabled
     end
 end

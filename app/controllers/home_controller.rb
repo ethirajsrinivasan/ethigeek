@@ -20,6 +20,6 @@ class HomeController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.find_by_title(params[:title])
   end
 end
