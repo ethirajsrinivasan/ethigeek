@@ -3,10 +3,14 @@
   <div class="section-body">
     <div class="project_links">
       <h5>Project Links</h5>
-	  	<ol>
-	  	<li><%= link_to "Project",  project.project_link %></li>
-	  	<li><%= link_to "Source Code", project.source_link %></li>
-	  	</ol>
-	  </div>
+      <ul>
+      <% if project.project_link.present?  %>
+        <li><%= link_to "Project",  project.project_link %></li>
+      <% end %>
+      <% if project.source_link.present?  %>
+        <li><%= link_to "Source Code", project.source_link  %></li>
+      <% end %>
+      </ul>
+    </div>
   </div>
 </section>
