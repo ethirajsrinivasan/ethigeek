@@ -48,6 +48,11 @@ body {
    color: #008CBA !important
   }
 }
+.like_project{
+  &:hover {
+    cursor: pointer
+  }
+}
 
 .intro-description {
   padding: 1em 0 2em 0;
