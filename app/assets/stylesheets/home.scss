@@ -36,6 +36,19 @@ body {
   line-height: 1.6;
 }
 
+.traverse-section{
+  .traverse {
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+  a {
+   color: #008CBA !important
+  }
+}
+
 .intro-description {
   padding: 1em 0 2em 0;
 }
