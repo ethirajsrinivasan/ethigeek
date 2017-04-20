@@ -1,11 +1,11 @@
 class HomeController < ApplicationController
 
   def welcome
-    @projects = Project.all
+    @projects = Project.order(:id)
   end
 
   def portfolio
-    @projects = Project.all
+    @projects = Project.order(:id)
   end
 
   def contact
