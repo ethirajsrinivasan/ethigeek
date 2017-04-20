@@ -21,5 +21,16 @@ class HomeController < ApplicationController
 
   def show
     @project = Project.find_by_title(params[:title])
+    @previous_project = @project.previous
+    @next_project = @project.next
+  end
+
+  def like
+    if request.xhr?
+      @project = Project.find_by_title(params[:title])
+      @project.likes+=1
+      @project.save!
+      render json: { status: :ok, likes: @project.likes }.to_json
+    end
   end
 end

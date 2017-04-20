@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get "/about", to: "home#about"
   get "/resume", to: "home#resume"
   get "/portfolios/:title", to: "home#show", as: 'portfolios'
+  post "/portfolios/:title/like", to: "home#like", as: 'portfolios_like'
   resources :projects
 end
