@@ -4,4 +4,14 @@
 $ ->
   $('.like_project').click (e) ->
       $.post($(this).data('href'), {}).done (data) ->
-        $('.like_count').html data['likes']
+        return $('.like_count').html data['likes']
+
+$ ->
+  $('#search').keyup ->
+    $.get($(this).data('href'), {search: $(this).val()}).done (data) ->
+      $(".portfolio_container").html($(data).html())
+
+$ ->
+  $('.filters input[type=radio]').change ->
+    $.get($(this).data('href'), {type: $(this).val()}).done (data) ->
+      $(".portfolio_container").html($(data).html())

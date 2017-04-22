@@ -54,6 +54,13 @@ body {
   }
 }
 
+.filters {
+  padding-top: .5em;
+  span {
+    white-space: nowrap;
+  }
+}
+
 .intro-description {
   padding: 1em 0 2em 0;
 }
