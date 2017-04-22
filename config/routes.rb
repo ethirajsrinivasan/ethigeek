@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get "/resume", to: "home#resume"
   get "/portfolios/:title", to: "home#show", as: 'portfolios'
   post "/portfolios/:title/like", to: "home#like", as: 'portfolios_like'
+  get "/portfolios_filter", to: "home#filter", as: 'portfolios_filter'
   resources :projects
 end

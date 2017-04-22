@@ -96,6 +96,16 @@
     <%= text_area(:project ,:image_url, rows:10)%>
   </div>
 
+  <div class="field">
+    <%= f.label :likes %>
+    <%= f.text_field :likes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :filter_types %>
+    <%= f.text_field :filter_types %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
