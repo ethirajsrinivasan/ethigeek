@@ -1,15 +1,16 @@
-<div class="about-banner" style="background-image: url(<%="#{@project.image_url}"%>)"></div>
+<% content_for :title, @project.title.titleize %>
+<!-- <div class="about-banner" style="background-image: url(<%="#{@project.image_url}"%>)"></div> -->
 <div class="body_wrapper">
   <div class="row">
   	<div class="large-12 columns">
-  		<h1 class="about-header"><%= @project.title.titleize %></h1>
-      <section>
+  		<h1><%= @project.title.titleize %></h1>
+      <!-- <section>
         <div class="section-heading"></div>
         <div class="section-body">
           <h3><%= @project.description %>
           </h3>
         </div>
-      </section>
+      </section> -->
     </div>
   </div>
   <div class="row">
