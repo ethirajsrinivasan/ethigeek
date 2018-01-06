@@ -11,10 +11,11 @@ body {
 
 .fixed {
   border-bottom: 1px solid #dadada;
-  background-color: white;
+  background-color: #2FC19B;
   .top-bar {
     margin-left: 3em;
     margin-right: 3em;
+    background-color: inherit;
     .title-area {
       a:hover {
         background-color: inherit;
@@ -23,8 +24,8 @@ body {
     };
   }
 }
-.top-bar-section ul li {
-  background-color: inherit;
+.top-bar-section ul li a {
+  background-color: #2FC19B !important;
 }
 
 .section-heading {
@@ -67,7 +68,7 @@ body {
 
 @media only screen and (min-width: 64.063em) {
   .now-section .row {
-    margin-bottom: -8em
+    margin-bottom: -6em
   }
 }
 
@@ -123,7 +124,7 @@ section {
 .about {
   float: right;
   color: white;
-  background-color: #4a89dc;
+  background-color: #2FC19B;
   width: 240px;
   padding: 2em 2em 0 2em;
   border-radius: .25rem;
@@ -342,6 +343,7 @@ section {
 
 .footer {
   border-top: 1px solid #dadada;
+  background: #2FC19B
 }
 
 
@@ -355,4 +357,3 @@ section {
     border-top: 0;
   }
 }
-

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "ethigeek" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -30,7 +30,7 @@
       <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
           <li class="name">
-            <h1><%= link_to "", root_path, class: 'fi-home home-icon' %></h1>
+            <h1><%= link_to "ethigeek", root_path %></h1>
           </li>
            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
           <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -42,7 +42,7 @@
             <li><%= link_to "PORTFOLIO", portfolio_path %></li>
             <li><%= link_to "ABOUT", about_path %></li>
             <li><%= link_to "RESUME", resume_path, target: "_blank" %></li>
-            <li><a href="http://blog.ethigeek.com">BLOG</a></li>
+            <!-- <li><a href="http://blog.ethigeek.com">BLOG</a></li> -->
             <li><%= link_to "CONTACT", contact_path %></li>
           </ul>
 
