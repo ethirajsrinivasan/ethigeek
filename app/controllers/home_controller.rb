@@ -37,6 +37,7 @@ class HomeController < ApplicationController
     @project = Project.find_by_title(params[:title])
     @previous_project = @project.previous
     @next_project = @project.next
+    render "#{@project.title}"
   end
 
   def like
