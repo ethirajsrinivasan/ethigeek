@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
 
   def welcome
-    @projects = Project.order(:id)
+    @gems_projects = Project.gems
+    @ml_projects = Project.ml
+    @android_projects = Project.android
+    @web_projects = Project.web
   end
 
   def portfolio
@@ -37,6 +40,7 @@ class HomeController < ApplicationController
     @project = Project.find_by_title(params[:title])
     @previous_project = @project.previous
     @next_project = @project.next
+    render "#{@project.title}"
   end
 
   def like

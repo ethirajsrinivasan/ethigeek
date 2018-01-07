@@ -1,66 +1,60 @@
 <% content_for :title, "About" %>
-<div class="about-banner"></div>
 <div class="body_wrapper">
   <div class="row">
   	<div class="large-12 columns">
-  		<h1 class="about-header">About</h1>
-      <section>
+  		<h1>About Me</h1>
+      <!-- <section>
         <div class="section-heading"></div>
         <div class="section-body">
-          <h3>I'm a Pragmatic, Passionate, Full Stack Engineer and Graduate Student at NUS. I love creating aesthetic, reliable , user-cherising software products.
+          <h3>Pragmatic, Passionate, Full Stack Developer and Data Scientist.
+           I love creating aesthetic, reliable , user-cherising software products.
           </h3>
         </div>
-      </section>
+      </section> -->
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
       <aside class="about">
         <dl class="metadata"><dt>Languages</dt>
-          <dd>Ruby</dd>
-          <dd>Java</dd>
-          <dd>Python</dd>
+          <dd>Ruby, Python, Java, R</dd>
         </dl>
         <dl class="metadata"><dt>Web Development</dt>
-          <dd>HTML</dd>
-          <dd>CSS</dd>
-          <dd>Javascript</dd>
-          <dd>Jquery</dd>
-          <dd>Coffeescript</dd>
+          <dd>HTML & CSS, Javascript</dd>
+          <dd>Jquery, Coffeescript</dd>
         </dl>
         <dl class="metadata"><dt>Database Management</dt>
-          <dd>Postgres</dd>
-          <dd>SQLite</dd>
+          <dd>Postgres, SQLite & MySQL</dd>
         </dl>
         <dl class="metadata"><dt>Framework</dt>
-          <dd>Ruby on Rails</dd>
-          <dd>Bootstrap</dd>
-          <dd>Foundation</dd>
-          <dd>Angular</dd>
-          <dd>Android</dd>
+          <dd>Ruby on Rails, Sinatra</dd>
+          <dd>Android, Bootstrap, Foundation</dd>
         </dl>
         <dl class="metadata"><dt>Technologies</dt>
-          <dd>Redis</dd>
-          <dd>Memcached</dd>
-          <dd>Resque</dd>
+          <dd>Solr, Redis & Memcached</dd>
         </dl>
-        <dl class="metadata"><dt>Versioning Tools</dt>
-          <dd>Git</dd>
+        <dl class="metadata"><dt>Tools</dt>
+          <dd>Git, AWS, R Studio</dd>
+          <dd>Google Cloud, Heroku</dd>
+          <dd>Digital Ocean, Travis CI</dd>
+          <dd>Capistrano, Eclipse</dd>
+          <dd>Android Studio</dd>
         </dl>
       </aside>
       <div class="section-content">
         <section>
           <div class="section-heading">Summary</div>
-          <div class="section-body">My name is Ethiraj Srinivasan. I enjoy developing software products and  I love to make professional acquaintances.
+          <div class="section-body">I am Ethiraj Srinivasan, a full stack Developer and Data Scientist. I have enjoyed developing software products for my previous organizations. Then I joined National University of Singapore to do my Masters and extensively built my knowledge on Data Science and Machine Learning. I would like to apply my knowledge of Software Development along with Data Science to build aesthetic, reliable and user-cherising software products. I also love to make professional acquaintances.
           <br><br></div>
         </section>
         <section>
             <div class="section-heading">TL;DR</div>
             <div class="section-body tl-dr">
               <ul>
-                <li>I love creating products.</li>
-                <li>I have 3+ years experience in Software Development Engineering.</li>
-                <li>I am a Full Stack Engineer</li>
+                <li>I love building aesthetic, reliable , user-cherising software products.</li>
+                <li>I have 3+ years experience in Software Development</li>
+                <li>I am Graduate Student at National University of Singapore
+                <li>I am a Full Stack Developer and Data Scientist</li>
               </ul>
             </div>
         </section>
@@ -68,7 +62,7 @@
             <div class="section-heading">Story</div>
             <div class="section-body">
         </section> -->
-        <section>
+        <!-- <section>
             <div class="section-heading">Writing</div>
             <div class="section-body">
             I write a tech blog to share my experiences. Here are some of my recent writings.
@@ -82,12 +76,12 @@
             <br>
             <br>
             </div>
-        </section>
+        </section> -->
         <section>
             <div class="section-heading">Now</div>
             <div class="section-body now-section">
               <div class="row">
-                <div class="large-4 medium-4 columns">
+                <!-- <div class="large-4 medium-4 columns">
                   <div class="now-card">
                     <a target="_blank" href="https://www.amazon.ca/Peak-Secrets-New-Science-Expertise/dp/0544456238">
                       <div>
@@ -98,33 +92,34 @@
                       </div>
                     </a>
                   </div>
-                </div>
-                <div class="large-4 medium-4 columns">
+                </div> -->
+                <div class="large-6 medium-6 columns">
                   <div class="now-card">
-                    <h3 class="now-card-title">NOW WATCHING</h3>
-                    <%= link_to image_tag("latest_course.png"), "https://www.edx.org/course/how-win-coding-competitions-secrets-itmox-i2cpx-0" %>
-                    <h5 class="now-card-subtitle">How to Win Coding Competitions: Secrets of Champions</h5>
-                    <p class="now-card-desc"><small>by</small> Maxim  Buzdalov Pavel Krotkov and Daria Yakovleva</p>
+                    <h3 class="now-card-title">LEARNING EXPERIENCE</h3>
+                    <%= link_to image_tag("watching.png"), "https://www.edx.org/course/how-win-coding-competitions-secrets-itmox-i2cpx-0" %>
+                    <h5 class="now-card-subtitle">Fast.ai</h5>
+                    <!-- <p class="now-card-desc"><small>by</small> Maxim  Buzdalov Pavel Krotkov and Daria Yakovleva</p> -->
                   </div>
                 </div>
-                <div class="large-4 medium-4 columns">
+                <div class="large-6 medium-6 columns">
                   <div class="now-card learning">
                     <a target="_blank" href="http://elixir-lang.org/">
-                    <h3 class="now-card-title">NOW LEARNING</h3>
-                    <%= image_tag("elixir.png") %>
-                    <h5 class="now-card-subtitle">Elixir</h5>
+                    <h3 class="now-card-title">NOW WORKING</h3>
+                    <%= image_tag("learning.jpg") %>
+                    <h5 class="now-card-subtitle">Medical Image Diagnostics</h5>
+                    <!-- <p class="now-card-desc">Medical Image Diagnostics</p> -->
                     </a>
                   </div>
                 </div>
               </div>
             </div>
         </section>
-        <section>
+        <!-- <section>
           <div class="section-heading">Hobbies</div>
           <div class="section-body">
             I love reading books on my leisure time.Checkout some of the books that i have read <a href="https://www.goodreads.com/user/show/59952899-ethiraj">here</a>
           </div>
-        </section>
+        </section> -->
         <section>
           <div class="section-heading">Open source</div>
           <div class="section-body">I love contributing to open source projects and here is the graph showing my contributions over the past one year.
@@ -140,6 +135,9 @@
               <li><a href="https://www.udacity.com/course/new-android-fundamentals--ud851" target="_blank">Developing Android Apps</a>
               </li>
               <li><a target="_blank" href="https://www.udacity.com/course/android-development-for-beginners--ud837">Android Development for Beginners</a>
+              </li>
+              <li><a target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/J8XQELPD6BRL">Machine Learning by Stanford
+University on Coursera</a>
               </li>
             </ul>
           </div>
