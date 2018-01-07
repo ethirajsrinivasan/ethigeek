@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
 
   def welcome
-    @projects = Project.order(:id)
+    @gems_projects = Project.gems
+    @ml_projects = Project.ml
+    @android_projects = Project.android
+    @web_projects = Project.web
   end
 
   def portfolio

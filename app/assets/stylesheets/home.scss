@@ -195,7 +195,7 @@ section {
 
 @media only screen and (max-width: 64em) {
   .about {
-    background-color: #4a89dc;
+    background-color: #2FC19B;
     padding: 1em;
     padding-bottom: .3em;
     float: none;
@@ -356,4 +356,36 @@ section {
     border: 1px solid #dadada;
     border-top: 0;
   }
+}
+
+.image_project_header {
+  height: 150px !important;
+  width: 150px !important;
+  border-radius: 50%;
+}
+
+
+.panel a {
+  color:#008CBA
+}
+
+.project_stack .panel {
+  background: #ffffff;  
+  border: none;
+  img {
+    display:block;
+    margin:auto;
+  }
+  .project_domain_header {
+    padding-top: 1em;
+  }
+
+  p {
+  margin: 0
+  }
+  
+  ul {
+  margin-left: 1em
+  }
+
 }
