@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170421145225) do
+ActiveRecord::Schema.define(version: 20180110162421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20170421145225) do
     t.string   "image_url"
     t.integer  "likes",             default: 0
     t.string   "filter_types"
+    t.integer  "order"
   end
 
   create_table "settings", force: :cascade do |t|
