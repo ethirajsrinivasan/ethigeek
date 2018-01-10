@@ -29,6 +29,22 @@
         <%= render "project_links", project: @project %>
         <%= render "section", attribute: @project.learnings, title: "Learnings" %>
         <%= render "section", attribute: @project.appreciation, title: "Appreciation" %>
+        <section>
+          <div class="section-heading">Screenshots</div>
+          <div class="section-body">
+            <div class="row">
+              <div class="large-4 medium-4 columns">
+                <%= image_tag("login.png", class: "img-screenshot") %>
+              </div>
+              <div class="large-4 medium-4 columns">
+                <%= image_tag("login1.png", class: "img-screenshot") %>
+              </div>
+              <div class="large-4 medium-4 columns">
+                <%= image_tag("chatbot.jpg", class: "img-screenshot") %>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -38,22 +54,5 @@
     <div class="text-center like_count"><%= @project.likes %></div>
   </div>
   <hr>
-  <div class="traverse-section" %>
-    <div class="row">
-      <div class="large-12 columns">
-        <% if @previous_project %>
-          <div class="left" %>
-            <div class="traverse"><%= @previous_project.title.titleize %></div>
-            <%= link_to "&larr; Previous project".html_safe, portfolios_path(title: @previous_project.title) %>
-          </div>
-        <% end %>
-        <% if @next_project %>
-          <div class="right" %>
-            <div class="traverse"><%= @next_project.title.titleize %></div>
-            <div class="right"><%= link_to "Next project &rarr; ".html_safe, portfolios_path(title: @next_project.title) %></div>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  <%= render 'pagination_project' %>
 </div>
