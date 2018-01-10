@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-
+  default_scope { order(order: :asc) }
 
   scope :gems, -> { where(filter_types: "gems") }
   scope :android, -> { where(filter_types: "android") }
@@ -7,10 +7,10 @@ class Project < ApplicationRecord
   scope :ml, -> { where(filter_types: "ML") }
 
   def next
-    self.class.where("id > ?", id).first
+    self.class.where('"projects"."order" > ?', order).first
   end
 
   def previous
-    self.class.where("id < ?", id).last
+    self.class.where('"projects"."order" < ?', order).last
   end
 end
