@@ -30,30 +30,23 @@
         <%= render "section", attribute: @project.learnings, title: "Learnings" %>
         <%= render "section", attribute: @project.appreciation, title: "Appreciation" %>
         <section>
-          <div class="section-heading">Screenshots</div>
+          <div class="section-heading">Data Source</div>
           <div class="section-body">
-            <div class="row">
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("appointment_screenshot.png", class: "img-screenshot") %>
-              </div>
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("category_screenshot.png", class: "img-screenshot") %>
-              </div>
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("healthbio_screenshot.png", class: "img-screenshot") %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("ice_screenshot.png", class: "img-screenshot") %>
-              </div>
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("measurement_screenshot.png", class: "img-screenshot") %>
-              </div>
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("medicine_screenshot.png", class: "img-screenshot") %>
-              </div>
-            </div>
+            Mammogram images are obtained from the following sources
+            <ul>
+              <li><%= link_to "MIAS","http://www.mammoimage.org/databases/",target: "_blank" %></li>
+              <li><%= link_to "DDSM","http://marathon.csee.usf.edu/Mammography/Database.html",target: "_blank" %></li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading">Pre Processing</div>
+          <div class="section-body">
+          The project is currently at the pre processing stage. Some of the pre processing to be done are
+          <ul>
+            <li>Remove Mammogram labels</li>
+            <li>Identify the biggest blob</li>
+          </ul>
           </div>
         </section>
       </div>

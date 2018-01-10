@@ -26,9 +26,72 @@
       </aside>
       <div class="section-content">
         <%= render "section", attribute: @project.summary, title: "Summary" %>
-        <%= render "project_links", project: @project %>
+        <section>
+          <div class="section-heading"></div>
+          <div class="section-body">
+            <div class="project_links">
+              <h5>Project Links</h5>
+              <ul>
+                <li><%= link_to "Application", "https://sunilp.shinyapps.io/geospatialapp/", target: '_blank' %></li>
+                <li><%= link_to "Blog", "https://analyticsandintelligentsystems.wordpress.com/2017/05/05/spatio-temporal-analysis-of-students-travelling-behaviours/", target: '_blank'  %></li>
+              </ul>
+            </div>
+          </div>
+        </section>
         <%= render "section", attribute: @project.learnings, title: "Learnings" %>
         <%= render "section", attribute: @project.appreciation, title: "Appreciation" %>
+        <section>
+          <div class="section-heading">Data Source</div>
+          <div class="section-body">We obtained data from these sources:
+            <ul>
+              <li>Moves & OpenPaths</li>
+              <li>Twitter API (Tweets on Reports of Train Disruptions, from SMRT’s Official Account)</li>
+              <li>Yelp API (Ratings of Restaurants)</li>
+              <li>Data.gov.sg (Shopping Mall & Hawker Centre Data)</li>
+              </ul>
+          </div>
+        </section>  
+        <section>
+          <div class="section-heading">Analysis</div>
+          <div class="section-body">Heatmaps, cluster maps and Anselin’s Local Moran’s I for Local Spatial Autocorrelation were used to analyze the students' behaviour with their movement data.
+          <br>
+          <br>
+          <h4><b><small>HeatMap</small></b></h4>
+          The heatmap shows the frequently travelled paths of the students. One very visible hotspot is the area around NUS, at the southwest part of Singapore.
+          <%= image_tag("heat.png") %>
+          <h4><b><small>Cluster Maps</small></b></h4>
+          This cluster map shows all the clusters formed and also serves as heatmap. Visit the <%= link_to "project", "https://sunilp.shinyapps.io/geospatialapp/", target: '_blank' %> page to view the distribution within the clusters by clicking on each cluster
+          <%= image_tag("cluster.png") %>
+           <h4><b><small>Anselin’s Local Moran’s <I></I></small></b></h4>
+          With Anselin’s Local Moran’s I Index we can tell the time spent by the students at each location, as compared to their neighbours. Red points are high-high points, which tell us that these students spend a longer duration, as compared to their neighbours and that there is a high concentration of these students in this particular location. Blue points are low-low points and signify the contrary.
+          <%= image_tag("moran_i.png") %>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading">Application</div>
+          <div class="section-body">After analyzing the movement pattern of NUS students, we made an attempt to address our objectives, by examining the impact of train faults on students’ travel plans and also to propose useful information on nearby amenities.
+          <br>
+          <br>
+          <h4><b><small>Train Faults</small></b></h4>
+          By plotting the lines where the disruptions have occurred, we can see which line is the most prone to train faults (in the past 2 years). We have also identified that train disruptions usually occur on Mondays and Thursdays. Although it is not practical to avoid travelling on those days, we advise that students be prepared for an increased probability of incidents or chose an alternate route.
+          <%= image_tag("train.png") %>
+          <h4><b><small>Shopping Malls</small></b></h4>
+          Using medoid clustering to determine the centres of the clusters of students’ movements, we created a geofence with 3 km radius from the centre to highlight which shopping malls are closest to these clusters. As shown in the image below, we identified 3 main clusters– around NUS, CBD and one far east. There are not many shopping malls in these clusters, as these clusters are residential areas. We have also provided customer rating of these malls (extracted from yelp).
+          <%= image_tag("shopping.png") %>
+          <h4><b><small>Hawker Centres</small></b></h4>
+          Hawker centres, on the other hand, tell a different story. There are an abundance and relatively equal distribution of hawker centres within the clusters. The government has made a conscientious effort to ensure that affordable food is available within a walking distance, to all residing in these residential districts. Customer ratings for these hawker centres are available too.
+          <%= image_tag("hawker.png") %>
+          <h4><b><small>Proposal of Alternative Travelling Route</small></b></h4>
+          We have attempted to propose an alternate route in the event of a train disruption, from Raffles Place to NUS ISS. As this route planning algorithm is in its infancy, we have only proposed this one alternative, which is only possible via car/taxi.
+          <%= image_tag("alternative.png") %>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading">Conclusion</div>
+          <div class="section-body">
+            In this project, we achieved our objectives of proposing alternative routes and helping students plan their travel routes better in the event of train disruptions, as well as suggesting helpful information on nearby amenities.
+          </div>
+        </section>
       </div>
     </div>
   </div>

@@ -26,7 +26,33 @@
       </aside>
       <div class="section-content">
         <%= render "section", attribute: @project.summary, title: "Summary" %>
-        <%= render "project_links", project: @project %>
+        <section>
+          <div class="section-heading"></div>
+          <div class="section-body">
+            <div class="project_links">
+              <h5>Project Links</h5>
+              <ul>
+                <li><strike><%= link_to "Project Repositry is private"%></strike></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading">Project Plan</div>
+          <div class="section-body">
+            <%= image_tag("capture.jpg") %>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading">User Stories</div>
+          <div class="section-body">As Agile Model was followed user requirements were captured in the form of user stories
+            <%= image_tag("user_stories.jpeg") %>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading">Product</div>
+          <div class="section-body">Minimum Viable Product is yet to be released</div>
+        </section>
         <%= render "section", attribute: @project.learnings, title: "Learnings" %>
         <%= render "section", attribute: @project.appreciation, title: "Appreciation" %>
       </div>
