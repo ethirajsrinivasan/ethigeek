@@ -34,7 +34,7 @@
 			<div class="panel  radius">
 			  <%= image_tag("rubygems.png",class: 'image_project_header') %>
 			  <h4 class="text-center project_domain_header">Ruby Gems</h4>
-			  <p class="text-justify">While developing web applications I made use of many quality gems to effectively utilise my time. All these gems are open source. It is a contribution to the ruby community. I wanted to contribute to the community and began my journey of open source contribution. I created some gems and became collabarator for few gems. These gems are listed below</p>
+			  <p class="text-justify">While developing web applications I made use of many quality gems to effectively utilise my time. All these gems are open source. I wanted to contribute to the ruby community and began my journey of open source contribution. I created some gems and became collabarator for few gems. These gems are listed below</p>
 			  <ul>
 			  	<% @gems_projects.each do |project| %>
 			  	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
