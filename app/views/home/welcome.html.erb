@@ -22,7 +22,7 @@
 			<div class="panel  radius" data-equalizer-watch>
 			  <%= image_tag("web.png",class: 'image_project_header') %>
 			  <h4 class="text-center project_domain_header">Web Application</h4>
-			  <p class="text-justify">I build my expertise on web application during my career. I progressively build knowledge on web technologies and frameworks especially ruby on rails and implemented state of the art technologies to improve performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
+			  <p class="text-justify">I built my expertise on web application during my career. I progressively build knowledge on web technologies and frameworks especially ruby on rails and implemented state of the art technologies to improve performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
 		    <ul>
 		    	<% @web_projects.each do |project| %>
 		    	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
