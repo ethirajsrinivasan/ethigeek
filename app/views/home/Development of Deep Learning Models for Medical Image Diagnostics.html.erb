@@ -42,11 +42,35 @@
         <section>
           <div class="section-heading">Pre Processing</div>
           <div class="section-body">
-          The project is currently at the pre processing stage. Some of the pre processing to be done are
-          <ul>
-            <li>Remove Mammogram labels</li>
-            <li>Identify the biggest blob</li>
-          </ul>
+            <div>In order to remove the noise from the image the biggest contour(largest blob) is found from the image. Mask of the biggest contour is used to clean the images</div>
+            <div class="row">
+              <div class="large-6 columns">
+                <%= image_tag("before_preprocess.png", class: "img-med") %>
+                <h4 class="text-center">
+                  <small>Original Image</small>
+                </h4>
+              </div>
+              <div class="large-6 columns">
+                <%= image_tag("contour_detection.png", class: "img-med") %>
+                <h4 class="text-center">
+                  <small>Contours</small>
+                </h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="large-6 columns">
+                <%= image_tag("largest_contour.png", class: "img-med") %>
+                <h4 class="text-center">
+                  <small>Largest Contour</small>
+                </h4>
+              </div>
+              <div class="large-6 columns">
+                <%= image_tag("after_preprocess.png", class: "img-med") %>
+                <h4 class="text-center">
+                  <small>Proprocessed Image</small>
+                </h4>
+              </div>
+            </div>
           </div>
         </section>
       </div>
