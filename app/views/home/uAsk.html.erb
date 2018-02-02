@@ -30,17 +30,13 @@
         <%= render "section", attribute: @project.learnings, title: "Learnings" %>
         <%= render "section", attribute: @project.appreciation, title: "Appreciation" %>
         <section>
-          <div class="section-heading">Screenshots</div>
+          <div class="section-heading">Demo</div>
           <div class="section-body">
             <div class="row">
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("login.png", class: "img-screenshot") %>
-              </div>
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("login1.png", class: "img-screenshot") %>
-              </div>
-              <div class="large-4 medium-4 columns">
-                <%= image_tag("chatbot.jpg", class: "img-screenshot") %>
+              <div class="large-8 medium-8 large-centered medium-centered columns">
+                <div class="flex-video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/poZ0JIMNDbY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
               </div>
             </div>
           </div>
