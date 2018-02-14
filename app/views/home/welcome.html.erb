@@ -20,6 +20,18 @@
 		</div>
 		<div class="large-3 columns">
 			<div class="panel  radius" data-equalizer-watch>
+			  <%= image_tag("https://assets-ethi.appspot.com/images/android.png",class: 'image_project_header') %>
+			  <h4 class="text-center project_domain_header">Android Apps</h4>
+			  <p class="text-justify">With the advent of smartphones, large number of applications for android OS were created. Developers all over the world created great applications in a day or two. This raised my interest to develop my own utility applications. These small applications helped me to develop application for general use. These applications are as follows</p>
+			  <ul>
+			  	<% @android_projects.each do |project| %>
+			  	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+			  	<% end %>
+			  </ul>
+			</div>
+		</div>
+		<div class="large-3 columns">
+			<div class="panel  radius" data-equalizer-watch>
 			  <%= image_tag("https://assets-ethi.appspot.com/images/web.png",class: 'image_project_header') %>
 			  <h4 class="text-center project_domain_header">Web Application</h4>
 			  <p class="text-justify">I built my expertise on web application during my career. I progressively build knowledge on web technologies and frameworks especially ruby on rails and implemented state of the art technologies to improve performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
@@ -37,18 +49,6 @@
 			  <p class="text-justify">While developing web applications I made use of many quality gems to effectively utilise my time. All these gems are open source. I wanted to contribute to the ruby community and began my journey of open source contribution. I created some gems and became collabarator for few gems. These gems are listed below</p>
 			  <ul>
 			  	<% @gems_projects.each do |project| %>
-			  	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
-			  	<% end %>
-			  </ul>
-			</div>
-		</div>
-		<div class="large-3 columns">
-			<div class="panel  radius" data-equalizer-watch>
-			  <%= image_tag("https://assets-ethi.appspot.com/images/android.png",class: 'image_project_header') %>
-			  <h4 class="text-center project_domain_header">Android Apps</h4>
-			  <p class="text-justify">With the advent of smartphones, large number of applications for android OS were created. Developers all over the world created great applications in a day or two. This raised my interest to develop my own utility applications. These small applications helped me to develop application for general use. These applications are as follows</p>
-			  <ul>
-			  	<% @android_projects.each do |project| %>
 			  	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
 			  	<% end %>
 			  </ul>
