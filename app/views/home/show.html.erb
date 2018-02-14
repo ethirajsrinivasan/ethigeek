@@ -25,16 +25,18 @@
         <%= render "metadata", attribute: @project.collaborators, title: "Collaborators" %>
       </aside>
       <div class="section-content">
-        <%= render "section", attribute: @project.summary, title: "Summary" %>
-        <%= render "project_links", project: @project %>
-        <%= render "section", attribute: @project.learnings, title: "Learnings" %>
-        <%= render "section", attribute: @project.appreciation, title: "Appreciation" %>
+        <% @project.sections.each do |section| %>
+          <section>
+            <div class="section-heading"><%= section.title %></div>
+            <%= section.content.html_safe %>
+          </section>
+        <% end  %>
       </div>
     </div>
   </div>
   <br>
   <div class="row">
-    <div class="text-center like_project" data-href=<%= "#{portfolios_like_path(title: @project.title)}" %> ><%= image_tag("heart.png",size: 25) %></div>
+    <div class="text-center like_project" data-href=<%= "#{portfolios_like_path(title: @project.title)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
     <div class="text-center like_count"><%= @project.likes %></div>
   </div>
   <hr>
