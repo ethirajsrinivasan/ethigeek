@@ -37,10 +37,9 @@ class HomeController < ApplicationController
   end
 
   def show
-    @project = Project.find_by_title(params[:title])
+    @project = Project.includes(:sections).find_by_title(params[:title])
     @previous_project = @project.previous
     @next_project = @project.next
-    render "#{@project.title}"
   end
 
   def like

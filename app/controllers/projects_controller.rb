@@ -72,8 +72,5 @@ class ProjectsController < ApplicationController
     def project_params
       params.require(:project).permit(Project.column_names.map(&:to_sym))
     end
-
-    def check_authorization
-      redirect_to :root unless Setting.project_page_enabled
-    end
+    
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110162421) do
+ActiveRecord::Schema.define(version: 20180212174506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 20180110162421) do
     t.integer  "likes",             default: 0
     t.string   "filter_types"
     t.integer  "order"
+  end
+
+  create_table "sections", force: :cascade do |t|
+    t.integer  "order"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at",                                                      null: false
+    t.datetime "updated_at",                                                      null: false
+    t.integer  "project_id"
+    t.integer  "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
   create_table "settings", force: :cascade do |t|
