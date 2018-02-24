@@ -7,24 +7,6 @@ class HomeController < ApplicationController
     @web_projects = Project.web
   end
 
-  def portfolio
-    if request.xhr?  # blank? covers both nil and empty string
-      @projects = Project.order(:id).where('title iLIKE ?', "%#{params[:search]}%")
-      render partial: "portfolio" and return
-    else
-      @projects = Project.order(:id)
-    end
-  end
-
-  def filter
-    if params[:type]=='all'
-      @projects = Project.order(:id)
-    else
-      @projects = Project.order(:id).where('filter_types iLIKE ?', "%#{params[:type]}%")
-    end
-    render partial: "portfolio"
-  end
-
   def contact
   end
 
