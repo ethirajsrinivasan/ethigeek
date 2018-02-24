@@ -1,10 +1,10 @@
 class Section < ApplicationRecord
   default_scope { order(order: :asc) }
 
-  #Association
+  # Association
   belongs_to :project
 
-  #vaidations
+  # vaidations
   validates :order, presence: true
   validates :title, presence: true
   validates :content, presence: true

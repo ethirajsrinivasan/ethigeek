@@ -29,7 +29,6 @@ class SectionsController < ApplicationController
 
     respond_to do |format|
       if @section.save
-        # format.html { redirect_to @section, notice: 'Section was successfully created.' }
         format.html { redirect_to new_section_path, notice: 'Section was successfully created.' }
         format.json { render :show, status: :created, location: @section }
       else
@@ -64,13 +63,14 @@ class SectionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_section
-      @section = Section.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def section_params
-      params.require(:section).permit(:order, :title, :content, :project_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_section
+    @section = Section.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def section_params
+    params.require(:section).permit(:order, :title, :content, :project_id)
+  end
 end
