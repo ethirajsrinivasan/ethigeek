@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-
   def welcome
     @gems_projects = Project.gems
     @ml_projects = Project.ml
@@ -25,11 +24,10 @@ class HomeController < ApplicationController
   end
 
   def like
-    if request.xhr?
-      @project = Project.find_by_title(params[:title])
-      @project.likes+=1
-      @project.save!
-      render json: { status: :ok, likes: @project.likes }.to_json
-    end
+    redirect_to :root unless request.xhr?
+    @project = Project.find_by_title(params[:title])
+    @project.likes += 1
+    @project.save!
+    render json: { status: :ok, likes: @project.likes }.to_json
   end
 end
