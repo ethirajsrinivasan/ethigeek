@@ -10,47 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221085320) do
+ActiveRecord::Schema.define(version: 2018_02_21_085320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
-    t.string   "title"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "duration"
-    t.string   "role"
-    t.string   "tools"
-    t.string   "tasks"
-    t.string   "team"
-    t.string   "platform"
-    t.string   "collaborators"
-    t.string   "color"
-    t.string   "image_url"
-    t.integer  "likes",         default: 0
-    t.string   "filter_types"
-    t.integer  "order"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "duration"
+    t.string "role"
+    t.string "tools"
+    t.string "tasks"
+    t.string "team"
+    t.string "platform"
+    t.string "collaborators"
+    t.string "color"
+    t.string "image_url"
+    t.integer "likes", default: 0
+    t.string "filter_types"
+    t.integer "order"
   end
 
   create_table "sections", force: :cascade do |t|
-    t.integer  "order"
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at",                                                      null: false
-    t.datetime "updated_at",                                                      null: false
-    t.integer  "project_id"
-    t.integer  "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
+    t.integer "order"
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "project_id"
+    t.integer "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
   create_table "settings", force: :cascade do |t|
-    t.string   "var",                   null: false
-    t.text     "value"
-    t.integer  "thing_id"
-    t.string   "thing_type", limit: 30
+    t.string "var", null: false
+    t.text "value"
+    t.integer "thing_id"
+    t.string "thing_type", limit: 30
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true, using: :btree
+    t.index ["thing_type", "thing_id", "var"], name: "index_settings_on_thing_type_and_thing_id_and_var", unique: true
   end
 
 end
