@@ -8,6 +8,10 @@ class BlogsController < ApplicationController
     @blogs = Blog.where(state: 'published').order("published_at DESC")
   end
 
+  def show_all
+    @blogs = Blog.all
+  end
+
   # GET /blogs/1
   # GET /blogs/1.json
   def show

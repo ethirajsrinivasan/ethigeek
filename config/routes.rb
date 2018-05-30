@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     member do
       post :like
     end
+    collection do
+      get :show_all
+    end
   end
   resources :sections
   # resources :projects
