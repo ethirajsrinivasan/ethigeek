@@ -15,6 +15,7 @@
 //= require jquery.minicolors
 //= require foundation
 //= require foundation/foundation.clearing
+//= require foundation-datepicker
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

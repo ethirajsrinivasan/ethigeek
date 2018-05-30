@@ -10,12 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_02_21_085320) do
+ActiveRecord::Schema.define(version: 2018_05_29_080425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "projects", force: :cascade do |t|
+  create_table "blogs", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "state", default: "draft", null: false
+    t.string "content_url", null: false
+    t.date "published_at", null: false
+    t.string "slug"
+    t.integer "likes", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
+    t.string "slug", null: false
+    t.integer "sluggable_id", null: false
+    t.string "sluggable_type", limit: 50
+    t.string "scope"
+    t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "projects", id: :serial, force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,7 +56,7 @@ ActiveRecord::Schema.define(version: 2018_02_21_085320) do
     t.integer "order"
   end
 
-  create_table "sections", force: :cascade do |t|
+  create_table "sections", id: :serial, force: :cascade do |t|
     t.integer "order"
     t.string "title"
     t.text "content"
@@ -43,7 +66,7 @@ ActiveRecord::Schema.define(version: 2018_02_21_085320) do
     t.integer "#<ActiveRecord::ConnectionAdapters::PostgreSQL::TableDefinition"
   end
 
-  create_table "settings", force: :cascade do |t|
+  create_table "settings", id: :serial, force: :cascade do |t|
     t.string "var", null: false
     t.text "value"
     t.integer "thing_id"

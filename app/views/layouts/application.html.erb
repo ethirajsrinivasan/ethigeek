@@ -42,6 +42,9 @@
             <li><%= link_to "PORTFOLIO", root_path %></li>
             <li><%= link_to "ABOUT ME", about_path %></li>
             <li><%= link_to "RESUME", resume_path, target: "_blank" %></li>
+            <% if Setting.project_page_enabled %>
+              <%= link_to "BLOG", blogs_path %></li>
+            <% end %>
             <!-- <li><a href="http://blog.ethigeek.com">BLOG</a></li> -->
             <li><%= link_to "CONTACT", contact_path %></li>
           </ul>

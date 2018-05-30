@@ -1,0 +1,18 @@
+<% content_for :title, @blog.title.titleize %>
+<div class="body_wrapper">
+  <div class="row">
+     <div class="large-8 medium-12 small-12 columns large-centered ">
+	<%= image_tag "https://assets-ethi.appspot.com/images/mypic.jpg" ,size:"50x50", alt:"Picture", class: "left profile"%>
+	<div class="left">Ethiraj Srinivasan</div><br>
+	<div class="position">Data Engineer, Knorex</div>
+	<div class="published_at"><%= @blog.published_at.strftime("%b %d, %Y") %></div>
+	<%= @blog.content.html_safe %>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+     <div class="text-center like_blog" data-href=<%= "#{like_blog_path(@blog)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
+     <div class="text-center like_count"><%= @blog.likes %></div>
+  </div>
+  <%= render "shared/disqus", blog: @blog %>
+</div>
