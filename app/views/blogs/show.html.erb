@@ -14,5 +14,5 @@
      <div class="text-center like_blog" data-href=<%= "#{like_blog_path(@blog)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
      <div class="text-center like_count"><%= @blog.likes %></div>
   </div>
-  <%= render "shared/disqus", blog: @blog %>
+  <%= render "shared/disqus" %>
 </div>
