@@ -32,13 +32,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'foundation-rails', '~> 5.5', '>= 5.5.2.1'
-gem 'foundation-icons-sass-rails'
 gem 'rails-controller-testing'
 gem 'rails-settings-cached'
 gem "octokit"
 gem 'friendly_id'
-gem 'foundation-datepicker-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
