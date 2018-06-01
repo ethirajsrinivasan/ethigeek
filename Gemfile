@@ -36,6 +36,8 @@ gem 'rails-controller-testing'
 gem 'rails-settings-cached'
 gem "octokit"
 gem 'friendly_id'
+gem 'bootstrap', '~> 4.1.1'
+gem 'httparty'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

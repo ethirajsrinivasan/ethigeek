@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.minicolors
+//= require popper
+//= require bootstrap
 //= require_tree .

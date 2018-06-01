@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title><%= content_for?(:title) ? yield(:title) : "ethigeek" %></title>
-
     <%= stylesheet_link_tag    "application" %>
     <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
@@ -13,50 +11,118 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-66415800-8', 'auto');
-      ga('send', 'pageview');
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66415800-8', 'auto');
+    ga('send', 'pageview');
     </script>
   </head>
-
-  <body>
-  
-    <div class="fixed">
-      <nav class="top-bar" data-topbar role="navigation">
-        <ul class="title-area">
-          <li class="name">
-            <h1><%= link_to "ethigeek", root_path %></h1>
-          </li>
-           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-        </ul>
-
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li><%= link_to "PORTFOLIO", root_path %></li>
-            <li><%= link_to "ABOUT ME", about_path %></li>
-            <li><%= link_to "RESUME", resume_path, target: "_blank" %></li>
-            <% if Setting.project_page_enabled %>
-              <li><%= link_to "BLOG", blogs_path %></li>
-            <% end %>
-            <!-- <li><a href="http://blog.ethigeek.com">BLOG</a></li> -->
-            <li><%= link_to "CONTACT", contact_path %></li>
+  <body data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
+    <section class="cover text-center">
+      <nav id="navbar-scrollspy" class="navbar fixed-top navbar-expand-lg navbar-trans navbar-light">
+        <a class="navbar-brand" href="#"><strong>Ethigeek</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+          	<li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/resume">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog">Blog</a>
+            </li>
           </ul>
-
-        </section>
+        </div>
       </nav>
-    </div>
-    <div class="row">
+    </section>
+      <div id="pricing" class="scroll-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Services</h2>
+              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">E-Commerce</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Responsive Design</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Web Security</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="features" class="scroll-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Services</h2>
+              <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">E-Commerce</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Responsive Design</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+            <div class="col-md-4">
+              <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+              </span>
+              <h4 class="service-heading">Web Security</h4>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    <!-- <div class="row">
       <div class="large-12 columns">
         <%= yield %>
       </div>
-    </div>
-    <div class="footer">
+    </div> -->
+    <!-- <div class="footer">
       <div class="row">
         <div class="large-12 columns text-center">
           <ul class="inline-list social-list">
@@ -66,7 +132,6 @@
           </ul>
         </div>
       </div>
-    </div>
-    
+    </div> -->
   </body>
 </html>
