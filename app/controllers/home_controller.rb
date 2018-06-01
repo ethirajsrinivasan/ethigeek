@@ -10,8 +10,13 @@ class HomeController < ApplicationController
   end
 
   def resume
-    data = open("https://assets-ethi.appspot.com/files/resume.pdf")
-    send_data(data.read, :type => 'application/pdf', :disposition => 'inline')
+    link = "http://assets-ethi.appspot.com/files/resume.pdf"
+    url = URI.parse(link)
+    req = Net::HTTP::Get.new(url.to_s)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+      http.request(req)
+    }
+    send_data(res.body, :type => 'application/pdf', :disposition => 'inline')
   end
 
   def about
