@@ -20,9 +20,9 @@
     </script>
   </head>
   <body data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
-    <section class="cover text-center">
+    <section class="cover text-center" style="background-image: url(<%= "#{image_path(header_image)}" %>);min-height:<%= "#{header_height}"%>">
       <nav id="navbar-scrollspy" class="navbar fixed-top navbar-expand-lg navbar-trans navbar-light">
-        <a class="navbar-brand" href="#"><strong>Ethigeek</strong></a>
+        <a class="navbar-brand" href="/"><strong>Ethigeek</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
