@@ -2,9 +2,10 @@
   <div class="large-8 large-centered columns  text-center blog-index ">
     <% @blogs.each do |blog| %>
       <div class="blog-card">
-      <h3><b><%= link_to blog.title, @blog %></b></h3>
-      <div>posted on <b><%= blog.published_at.strftime("%b %d, %Y") %></b></div>
+      <h3><b><%= link_to blog.title, blog %></b></h3>
+      <h6>posted on <b><%= blog.published_at.strftime("%b %d, %Y") %></b></h6>
     </div>
+    <hr>
     <% end %>
   </div>
 </div>
