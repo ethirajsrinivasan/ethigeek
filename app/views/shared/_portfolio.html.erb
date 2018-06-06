@@ -1,0 +1,73 @@
+<div id="portfolio" class="scroll-section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<h3>Portfolio</h3>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-6 d-flex align-items-stretch">
+				<div class="card text-center flex-fill">
+					<div class="card-header">
+						Machine Learning
+					</div>
+					<%= image_tag("https://assets-ethi.appspot.com/images/ml.png",class:"card-img-top",height:"250") %>
+					<div class="card-body">
+						<p class="text-justify">After my bachelor's degree, certain topics like influence propogation, word of mouth effect and community detection from social network boosted my interest towards Machine Learning. I extensively build my knowledge on Machine learning from the electives and projects I had during my masters course. Some of my machine learning projects are listed below</p>
+						<ul class="text-left">
+							<% @ml_projects.each do |project| %>
+						  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+							<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 d-flex align-items-stretch">
+				<div class="card text-center flex-fill">
+					<div class="card-header">
+						Android Apps
+					</div>
+					<%= image_tag("https://assets-ethi.appspot.com/images/android.png",class:"card-img-top",height:"250") %>
+					<div class="card-body">
+						<p class="text-justify">With the advent of smartphones, large number of applications for android OS were created. Developers all over the world created great applications in a day or two. This raised my interest to develop my own utility applications. These small applications helped me to develop application for general use. These applications are as follows</p>
+						<ul class="text-left">
+						  	<% @android_projects.each do |project| %>
+						  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+						  	<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 d-flex align-items-stretch">
+				<div class="card text-center flex-fill">
+					<div class="card-header">
+						Web Applications
+					</div>
+					<%= image_tag("https://assets-ethi.appspot.com/images/web.png",class:"card-img-top",height:"250") %>
+					<div class="card-body">
+						<p class="text-justify">I built my expertise on web application during my career. I progressively build knowledge on web technologies and frameworks especially ruby on rails and implemented state of the art technologies to improve performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
+					    <ul class="text-left">
+					    	<% @web_projects.each do |project| %>
+					    	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+						  	<% end %>
+					    </ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 d-flex align-items-stretch">
+				<div class="card text-center flex-fill">
+					<div class="card-header">
+						Ruby Gems
+					</div>
+					<%= image_tag("https://assets-ethi.appspot.com/images/rubygems.png",class:"card-img-top",height:"250") %>
+					<div class="card-body">
+						<p class="text-justify">While developing web applications I made use of many quality gems to effectively utilise my time. All these gems are open source. I wanted to contribute to the ruby community and began my journey of open source contribution. I created some gems and became collabarator for few gems. These gems are listed below</p>
+						<ul class="text-left">
+						  	<% @gems_projects.each do |project| %>
+						  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+						  	<% end %>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

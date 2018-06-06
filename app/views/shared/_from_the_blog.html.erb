@@ -1,0 +1,19 @@
+<div id="blogs" class="scroll-section">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col">
+				<h6 class="float-right"><%= link_to "View All", blogs_path %></h6>
+				<h3>From the Blog</h3>
+			</div>
+		</div>
+		<div class="row text-center">
+			<% @blogs.each do |blog| %>
+				<div class="col-lg-4 col-md-6 col-sm-12">
+					<%=image_tag("blog_post.jpg",class:"img-fluid") %>
+					<h5><%= blog.title %></h5>
+					<span><%= blog.published_at %></span>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

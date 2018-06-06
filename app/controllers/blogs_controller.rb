@@ -1,11 +1,12 @@
 class BlogsController < ApplicationController
   before_action :check_authorization
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  layout "blog_application"
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.where(state: 'published').order("published_at DESC")
+    @blogs = Blog.where(state: 'published').paginate(:page => params[:page]).order('id DESC')
   end
 
   def show_all

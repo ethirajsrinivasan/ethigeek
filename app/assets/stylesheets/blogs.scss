@@ -7,9 +7,11 @@
 #file {
 	.highlight {
 		pre {
-			margin-bottom: 2em;
+			margin-bottom: 1em;
+			padding: 1em;
 			overflow: auto;
 			font-size: 1em;
+			background: #e4e4e4;
 		}
 	}
 	a {
@@ -19,11 +21,10 @@
 	line-height: 2em;
 	text-align: justify
 	}
-	code{
+	code {
 		border-radius: 0.3em;
 		background: rgba(27,31,35,0.05);
 	}
-
 }
 
 .anchor {
@@ -33,7 +34,7 @@
 }
 
 .published_at {
-	color: grey
+	color: white
 }
 
 .position{

@@ -7,9 +7,7 @@ class Blog < ApplicationRecord
   validates :state,        inclusion: { in: ['draft', 'published'] }
   validates :published_at, presence: true, if: :published?
 
-  
-
-  #paginates_per 8
+  self.per_page = 10
 
   def published?
     state == 'published'
@@ -19,7 +17,7 @@ class Blog < ApplicationRecord
   # Fetches the content from the github
   #
   def content
-    Octokit.contents("ethirajsrinivasan/blogs",
+    @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
                      path: content_url,
                      accept: 'application/vnd.github.v3.html')
   end

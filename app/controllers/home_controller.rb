@@ -4,9 +4,7 @@ class HomeController < ApplicationController
     @ml_projects = Project.ml
     @android_projects = Project.android
     @web_projects = Project.web
-  end
-
-  def contact
+    @blogs = Blog.where(state:"published").first(3)
   end
 
   def resume
@@ -17,9 +15,6 @@ class HomeController < ApplicationController
       http.request(req)
     }
     send_data(res.body, :type => 'application/pdf', :disposition => 'inline')
-  end
-
-  def about
   end
 
   def show

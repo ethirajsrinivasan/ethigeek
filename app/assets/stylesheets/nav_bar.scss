@@ -6,7 +6,7 @@ body {
 .cover {
 	background: #2b2d34 center;
 	background-size: cover;
-	min-height: 51rem;
+	min-height: 30rem;
 	height: auto;
 	border-radius: 0;
 	width: 100%;
@@ -45,29 +45,32 @@ body {
 			color: #f27e25 !important
 		}
 	}
+	a.nav-link.active{
+		color: #f27e25 !important
+	}
 }
 
-a.nav-link.active{
-	color: #f27e25 !important
-}
+
 
 .scroll-section{
-	min-height: 40rem;
 	height: auto;
 	overflow-y: scroll;
+	padding-top: 5em;
 }
 
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
-	.navbar {
-		padding-right: 10em !important;
-		padding-left: 10em !important;
-	}
-	.nav-link {
-		font-size: .85em;
-    padding: 1.5em 1em 1em 1em!important;
+	.cover {
+		min-height: 51rem !important;
+		.navbar {
+			padding-right: 10em !important;
+			padding-left: 10em !important;
+		}
+		.nav-link {
+			font-size: .85em;
+	    padding: 1.5em 1em 1em 1em!important;
+		}
 	}
 
 }
