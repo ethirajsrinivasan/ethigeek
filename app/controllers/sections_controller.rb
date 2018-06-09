@@ -5,7 +5,11 @@ class SectionsController < ApplicationController
   # GET /sections
   # GET /sections.json
   def index
-    @sections = Section.all
+    if params[:order_id].present?
+      @sections = Section.where(project_id:Project.where(order:params[:order_id]).first.id)
+    else
+      @sections = Section.all
+    end 
   end
 
   # GET /sections/1

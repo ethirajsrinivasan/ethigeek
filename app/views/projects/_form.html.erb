@@ -11,72 +11,70 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :duration %>
-    <%= f.text_field :duration %>
+    <%= f.text_field :duration,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :role %>
-    <%= f.text_field :role %>
+    <%= f.text_field :role,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :tools %>
-    <%= f.text_field :tools %>
+    <%= f.text_field :tools,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :tasks %>
-    <%= f.text_field :tasks %>
+    <%= f.text_field :tasks,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :team %>
-    <%= f.text_field :team %>
+    <%= f.text_field :team,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :platform %>
-    <%= f.text_field :platform %>
+    <%= f.text_field :platform,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :collaborators %>
-    <%= f.text_field :collaborators %>
+    <%= f.text_field :collaborators,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :color %>
     <%= f.text_field :color , class: "colorpicker"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image_url %>
-    <%= text_area(:project ,:image_url, rows:10)%>
+    <%= text_area(:project ,:image_url, rows:10,class: "form-control")%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :likes %>
-    <%= f.text_field :likes %>
+    <%= f.text_field :likes,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :filter_types %>
-    <%= f.text_field :filter_types %>
+    <%= f.text_field :filter_types,class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :order %>
-    <%= f.text_field :order %>
+    <%= f.text_field :order,class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit nil, class:"btn btn-primary"%>
 <% end %>

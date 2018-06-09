@@ -1,11 +1,12 @@
 class BlogsController < ApplicationController
   before_action :check_authorization
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  layout "blog_application"
 
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.where(state: 'published').order("published_at DESC")
+    @blogs = Blog.published.paginate(:page => params[:page]).order('id DESC')
   end
 
   def show_all
@@ -15,6 +16,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @previous_blog = @blog.previous
+    @next_blog = @blog.next
   end
 
   # GET /blogs/new
@@ -81,12 +84,12 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :state, :content_url, :published_at, :slug)
+      params.require(:blog).permit(:title, :state, :content_url, :published_at, :slug, :picture)
     end
 
     def refined_blog_params
     	refined_params = blog_params
-    	refined_params["published_at"] = Date.strptime(blog_params["published_at"], '%m/%d/%Y')
+    	refined_params["published_at"] = Date.strptime(blog_params["published_at"], '%Y-%m-%d')
     	refined_params
     end
 end

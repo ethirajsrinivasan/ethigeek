@@ -4,23 +4,25 @@ class HomeController < ApplicationController
     @ml_projects = Project.ml
     @android_projects = Project.android
     @web_projects = Project.web
-  end
-
-  def contact
+    @blogs = Blog.published.first(3)
+    render "welcome", layout: false
   end
 
   def resume
-    data = open("https://assets-ethi.appspot.com/files/resume.pdf")
-    send_data(data.read, :type => 'application/pdf', :disposition => 'inline')
-  end
-
-  def about
+    link = "http://assets-ethi.appspot.com/files/resume.pdf"
+    url = URI.parse(link)
+    req = Net::HTTP::Get.new(url.to_s)
+    res = Net::HTTP.start(url.host, url.port) {|http|
+      http.request(req)
+    }
+    send_data(res.body, :type => 'application/pdf', :disposition => 'inline')
   end
 
   def show
-    @project = Project.includes(:sections).find_by_title(params[:title])
+    @project = Project.active.includes(:sections).find_by_title(params[:title])
     @previous_project = @project.previous
     @next_project = @project.next
+    render "show", layout: "blog_application"
   end
 
   def like

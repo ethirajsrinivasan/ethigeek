@@ -1,10 +1,21 @@
-<div class="row">
-  <div class="large-8 large-centered columns  text-center blog-index ">
-    <% @blogs.each do |blog| %>
-      <div class="blog-card">
-      <h3><b><%= link_to blog.title, @blog %></b></h3>
-      <div>posted on <b><%= blog.published_at.strftime("%b %d, %Y") %></b></div>
-    </div>
-    <% end %>
-  </div>
+<div class="container">
+	<div class="spacer"></div>
+	<div class="row justify-content-center">
+	  	<div class="col blog_list text-center">
+			<% @blogs.each do |blog| %>
+		  		<div>
+		  			<h3><b><%= link_to blog.title, blog %></b></h3>
+		  			<h6><b><%= blog.published_at.strftime("%b %d, %Y") %></b></h6>
+				</div>
+				<br>
+			<% end %>
+	  	</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col text-center">
+	  		<div class="flickr_pagination">
+				<%= will_paginate @blogs %>
+	  		</div>
+	  	</div>
+	</div>
 </div>
