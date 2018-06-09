@@ -1,3 +1,24 @@
+body {
+	background: #282d32 !important;
+	.main-intro {
+		padding: 18em 0 18em 0em;
+		h3,h5 {
+			color:white !important;
+		    font-family: 'Raleway', sans-serif;
+		}
+	}
+}
+body.plain {
+	.cover {
+		min-height: 0 !important;
+	}
+	table {
+		color:white !important
+	}
+}
+.project_nav_link {
+	color: white !important
+}
 h1, h2, h3, h4, h5, h6 {
     color: #323232 !important;
     font-family: 'Raleway', sans-serif !important;
@@ -8,9 +29,11 @@ a{
 	}
 }
 .scroll-section {
-	h3 {
+	color: white;
+	h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+    font-family: 'Raleway', sans-serif !important;
 	text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
 	}
 	.card-img-top{
 	padding: 2em 2em 0 2em;
@@ -18,12 +41,19 @@ a{
 	.card {
 	margin: 2em;
 	}
+	.blog_title{
+		margin-top: 1em;
+		font-style: italic;
+	}
+	.section_header{
+		margin-bottom: 1em;
+	}
 }
 .footer {
 	position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #f5f5f5;
+    background-color: #b8b8b8;
     .list-inline-item {
     	padding-right:  1em;
     	padding-left:  1em;
@@ -50,9 +80,20 @@ a{
 	}
 	.blog_list {
 		a {
-			color: black
+			color: white
 		}
 	}
+	h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+    font-family: 'Raleway', sans-serif !important;
+	}
+
+	article {
+		color: white
+	}
+}
+.like_count {
+		color: white
 }
 .spacer {
 	padding:2em;
@@ -61,15 +102,46 @@ a{
 	.img-fluid {
 		padding:1em 0;
 	}
+	text {
+		fill: white !important
+	}
+}
+.project {
+	div,p {
+		color: white;
+	}
+	h1, h2, h3, h4, h5, h6 {
+    	color: white !important;
+    	font-family: 'Raleway', sans-serif !important;
+	}
+}
+.img-med {
+	width:30em !important;
+	height:24em !important;
+	margin: 1em 0;
+}
+.img-screenshot {
+	width:24em !important;
+	height:30em !important;
+	margin: 1em 0;
+}
+.img-bor {
+	margin: 1em 0;
 }
 
 .flickr_pagination {
 	.pagination {
 		display: inherit !important;
 	}
+	a {
+    	border: none !important;
+    }
 	a:hover, .flickr_pagination a:focus {
       background: inherit !important;
       color: #f27e25 !important;
     }
     margin-bottom: 1em;
 }
+.node--internal text {
+    text-shadow: none !important;
+    }

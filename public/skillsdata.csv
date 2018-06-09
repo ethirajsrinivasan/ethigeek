@@ -4,6 +4,7 @@ Ethi.Programing Language,
 Ethi.Programing Language.Ruby,4.5,#E54F24
 Ethi.Programing Language.Python,4,#D6BA33
 Ethi.Programing Language.Java,3.5,#1169AE
+Ethi.Programing Language.Scala,3,#876543
 Ethi.Programing Language.R,3,#F6854D
 Ethi.Front End,
 Ethi.Front End.HTML & CSS,4,#EB2C2F
@@ -18,9 +19,9 @@ Ethi.Databases.MongoDB,3.5,#56678A
 Ethi.Frameworks,
 Ethi.Frameworks.Back End,
 Ethi.Frameworks.Back End.Ruby on Rails,4.5,#59666C
-Ethi.Frameworks.Back End.Sinatra,3.5,#808080
+Ethi.Frameworks.Back End.Sinatra,3,#808080
 Ethi.Frameworks.Back End.Vertx,3.5,#FF9900
-Ethi.Frameworks.Back End.Flask,3.5,#524B6E
+Ethi.Frameworks.Back End.Flask,3,#524B6E
 Ethi.Frameworks.Front End,
 Ethi.Frameworks.Front End.Bootstrap,3.5,#4E7C93
 Ethi.Frameworks.Front End.Foundation Zurb,3.5,#60934E

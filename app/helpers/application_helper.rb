@@ -1,9 +1,11 @@
 module ApplicationHelper
 	def header_image
 		if params[:controller] == "blogs" && params[:action] == "index"
-			"blogs.jpg"
+			image_path("blogs.jpg")
+		elsif params[:controller] == "blogs" && params[:action] == "show"
+			@blog.picture
 		else
-			"welcome.jpg"
+			image_path("welcome.jpg")
 		end
 	end
 

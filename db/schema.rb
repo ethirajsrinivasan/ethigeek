@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_080425) do
+ActiveRecord::Schema.define(version: 2018_06_08_163921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_080425) do
     t.integer "likes", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_080425) do
     t.integer "likes", default: 0
     t.string "filter_types"
     t.integer "order"
+    t.string "status", default: "draft"
   end
 
   create_table "sections", id: :serial, force: :cascade do |t|

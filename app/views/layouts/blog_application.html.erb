@@ -8,6 +8,7 @@
 		<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
@@ -20,10 +21,11 @@
 		ga('create', 'UA-66415800-8', 'auto');
 		ga('send', 'pageview');
 		</script>
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	</head>
 	<body class="blog_body" data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
-		<section class="cover text-center" style="background-image: url(<%= "#{image_path(header_image)}" %>)">
-			<nav id="navbar-scrollspy" class="navbar fixed-top navbar-expand-lg navbar-trans navbar-light">
+		<section class="cover text-center" style="background-image: url(<%= "#{header_image}" %>)">
+			<nav id="navbar-scrollspy" class="navbar fixed-top navbar-expand-lg navbar-trans navbar-dark">
 				<a class="navbar-brand" href="/"><strong>Ethigeek</strong></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -37,7 +39,7 @@
 							<a class="nav-link" href="/#portfolio">Portfolio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/#blogs">Blog</a>
+							<a class="nav-link" href="/blogs">Blog</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="/#contact">Contact</a>
@@ -59,7 +61,7 @@
 		</section>
 		<%= yield %>
 		<div class="spacer"></div>
-		<footer class="footer">
+		<footer class="footer fixed-bottom">
 	      <div class="container">
 	        <ul class="list-inline d-flex justify-content-center">
 				<li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
@@ -69,4 +71,12 @@
 	      </div>
 	    </footer>
 	</body>
+	<script>
+    	AOS.init({
+	      offset: 200,
+	      duration: 600,
+	      easing: 'ease-in-sine',
+	      delay: 100,
+	    });
+  	</script>
 </html>

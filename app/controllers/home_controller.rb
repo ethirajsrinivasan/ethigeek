@@ -4,7 +4,8 @@ class HomeController < ApplicationController
     @ml_projects = Project.ml
     @android_projects = Project.android
     @web_projects = Project.web
-    @blogs = Blog.where(state:"published").first(3)
+    @blogs = Blog.published.first(3)
+    render "welcome", layout: false
   end
 
   def resume
@@ -18,9 +19,10 @@ class HomeController < ApplicationController
   end
 
   def show
-    @project = Project.includes(:sections).find_by_title(params[:title])
+    @project = Project.active.includes(:sections).find_by_title(params[:title])
     @previous_project = @project.previous
     @next_project = @project.next
+    render "show", layout: "blog_application"
   end
 
   def like
