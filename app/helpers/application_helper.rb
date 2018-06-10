@@ -16,4 +16,8 @@ module ApplicationHelper
 			"30rem"
 		end
 	end
+
+	def valid_user?
+  		user_signed_in? && current_user.email ="ethirajsrinivasan@gmail.com"
+  	end
 end
