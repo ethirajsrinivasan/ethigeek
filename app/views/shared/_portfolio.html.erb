@@ -5,11 +5,11 @@
 		</div>
 		<div class="row align-self-center justify-content-center">
 			<div data-aos="fade-right" class="col-md-6 col-sm-12 text-center">
-				<h3>Machine Learning</h3>
+				<h4>Machine Learning</h4>
 				<%= image_tag("https://assets-ethi.appspot.com/images/ml.png",height:"250") %>
 			</div>
 			<div data-aos="fade-left"class="col-md-6 my-auto col-sm-12">
-				<p class="text-justify"> I extensively build my knowledge on Machine learning through academic and prefessional work. Some of my machine learning projects are listed below</p>
+				<p class="text-justify"> I extensively built my knowledge on Machine learning through academic and prefessional work. Some of my machine learning projects are listed below</p>
 				<ul class="text-left">
 					<% @ml_projects.each do |project| %>
 				  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
@@ -17,9 +17,11 @@
 				</ul>
 			</div>
 		</div>
+		<br>
+		<br>
 		<div class="row align-self-center flex-row-reverse justify-content-center">
 			<div data-aos="fade-left"class="col-md-6 col-sm-12 text-center">
-				<h3>Android</h3>
+				<h4>Android</h4>
 				<%= image_tag("https://assets-ethi.appspot.com/images/android.png",height:"250") %>
 			</div>
 			<div data-aos="fade-right" class="col-md-6 my-auto col-sm-12">
@@ -31,13 +33,15 @@
 				</ul>
 			</div>
 		</div>
+		<br>
+		<br>
 		<div class="row align-self-center justify-content-center">
 			<div data-aos="fade-right" class="col-md-6  col-sm-12 text-center">
-				<h3>Web Applications</h3>
+				<h4>Web Applications</h4>
 				<%= image_tag("https://assets-ethi.appspot.com/images/web.png",height:"150") %>
 			</div>
 			<div data-aos="fade-left" class="col-md-6 my-auto col-sm-12">
-				<p class="text-justify"> I progressively build knowledge on web technologies & frameworks and implemented state of the art technologies to improve the performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
+				<p class="text-justify"> I built knowledge on web technologies & frameworks and implemented state of the art technologies to improve the performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
 			    <ul class="text-left">
 			    	<% @web_projects.each do |project| %>
 			    	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
@@ -45,9 +49,11 @@
 			    </ul>
 			</div>
 		</div>
+		<br>
+		<br>
 		<div class="row align-self-center flex-row-reverse justify-content-center">
 			<div data-aos="fade-left" class="col-md-6 col-sm-12 text-center">
-				<h3>Ruby Gems</h3>
+				<h4>Ruby Gems</h4>
 				<%= image_tag("https://assets-ethi.appspot.com/images/rubygems.png",height:"150") %>
 			</div>
 			<div data-aos="fade-right" class="col-md-6 my-auto col-sm-12">
