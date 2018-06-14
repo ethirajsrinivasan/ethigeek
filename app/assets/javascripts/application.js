@@ -13,9 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.minicolors
-//= require foundation
-//= require foundation/foundation.clearing
-//= require foundation-datepicker
+//= require jquery-ui
+//= require popper
+//= require bootstrap
 //= require_tree .
-
-$(function(){ $(document).foundation(); });

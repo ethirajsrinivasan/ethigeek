@@ -1,0 +1,69 @@
+<div id="portfolio" class="scroll-section">
+	<div class="container">
+		<div data-aos="fade-down" class="row justify-content-center">
+			<h3 class="section_header">Portfolio</h3>
+		</div>
+		<div class="row align-self-center justify-content-center">
+			<div data-aos="fade-right" class="col-md-6 col-sm-12 text-center">
+				<h4>Machine Learning</h4>
+				<%= image_tag("https://assets-ethi.appspot.com/images/ml.png",height:"250") %>
+			</div>
+			<div data-aos="fade-left"class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify"> I extensively built my knowledge on Machine learning through academic and prefessional work. Some of my machine learning projects are listed below</p>
+				<ul class="text-left">
+					<% @ml_projects.each do |project| %>
+				  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row align-self-center flex-row-reverse justify-content-center">
+			<div data-aos="fade-left"class="col-md-6 col-sm-12 text-center">
+				<h4>Android</h4>
+				<%= image_tag("https://assets-ethi.appspot.com/images/android.png",height:"250") %>
+			</div>
+			<div data-aos="fade-right" class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify">I developed few utility applications for my personal use. These small applications helped me to develop applications for a specific purpose. These applications are as follows</p>
+				<ul class="text-left">
+				  	<% @android_projects.each do |project| %>
+				  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+				  	<% end %>
+				</ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row align-self-center justify-content-center">
+			<div data-aos="fade-right" class="col-md-6  col-sm-12 text-center">
+				<h4>Web Applications</h4>
+				<%= image_tag("https://assets-ethi.appspot.com/images/web.png",height:"150") %>
+			</div>
+			<div data-aos="fade-left" class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify"> I built knowledge on web technologies & frameworks and implemented state of the art technologies to improve the performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
+			    <ul class="text-left">
+			    	<% @web_projects.each do |project| %>
+			    	<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+				  	<% end %>
+			    </ul>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row align-self-center flex-row-reverse justify-content-center">
+			<div data-aos="fade-left" class="col-md-6 col-sm-12 text-center">
+				<h4>Ruby Gems</h4>
+				<%= image_tag("https://assets-ethi.appspot.com/images/rubygems.png",height:"150") %>
+			</div>
+			<div data-aos="fade-right" class="col-md-6 my-auto col-sm-12">
+				<p class="text-justify">Good quality gems/libraries are sources to utilise our time effectively. I began my journey of open source contribution through these gems. I am the owner and collabarator for few gems. These gems are listed below</p>
+				<ul class="text-left">
+				  	<% @gems_projects.each do |project| %>
+				  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
+				  	<% end %>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

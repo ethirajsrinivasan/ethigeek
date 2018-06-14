@@ -1,0 +1,19 @@
+<div id="blogs" class="scroll-section">
+	<div class="container">
+		<div class="row justify-content-between">
+				<div class="col-4 my-auto">
+				<h3 class="section_header " data-aos="fade-right">From the Blog</h3></div>
+				<div class="col-4 my-auto">
+				<h5 data-aos="fade-left" class="section_header my-auto float-right"><%= link_to "View All", blogs_path %></h5></div>
+		</div>
+		<div class="row text-center">
+			<% @blogs.each do |blog| %>
+				<div data-aos="fade-up" class="col-lg-4 col-md-6 col-sm-12">
+					<%=image_tag(blog.picture,class:"img-tile") %>
+					<br>
+					<h5 class="blog_title"><%= link_to blog.title, blog %></h5>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

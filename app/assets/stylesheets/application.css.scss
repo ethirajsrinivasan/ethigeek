@@ -12,10 +12,10 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation_and_overrides
  *= require jquery.minicolors
- *= require foundation-datepicker
+ *= require jquery-ui
  */
 
- @import 'foundation-icons';
+ @import "bootstrap";
+
 

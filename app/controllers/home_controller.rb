@@ -4,9 +4,8 @@ class HomeController < ApplicationController
     @ml_projects = Project.ml
     @android_projects = Project.android
     @web_projects = Project.web
-  end
-
-  def contact
+    @blogs = Blog.published.first(3)
+    render "welcome", layout: false
   end
 
   def resume
@@ -19,13 +18,11 @@ class HomeController < ApplicationController
     send_data(res.body, :type => 'application/pdf', :disposition => 'inline')
   end
 
-  def about
-  end
-
   def show
-    @project = Project.includes(:sections).find_by_title(params[:title])
+    @project = Project.active.includes(:sections).find_by_title(params[:title])
     @previous_project = @project.previous
     @next_project = @project.next
+    render "show", layout: "blog_application"
   end
 
   def like

@@ -7,20 +7,30 @@ class Blog < ApplicationRecord
   validates :state,        inclusion: { in: ['draft', 'published'] }
   validates :published_at, presence: true, if: :published?
 
-  
-
-  #paginates_per 8
-
-  def published?
-    state == 'published'
-  end
+  self.per_page = 10
+  default_scope { order(published_at: :desc) }
+  scope :published, -> {where(state: "published")}
 
   #
   # Fetches the content from the github
   #
+
+  def published?
+    state == "published"
+  end
+
   def content
-    Octokit.contents("ethirajsrinivasan/blogs",
+    @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
                      path: content_url,
                      accept: 'application/vnd.github.v3.html')
   end
+
+  def next
+    self.class.published.where('"blogs"."published_at" < ?', published_at).first
+  end
+
+  def previous
+    self.class.published.where('"blogs"."published_at" > ?', published_at).first
+  end
+
 end

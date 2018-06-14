@@ -5,5 +5,5 @@ $ ->
   $('.like_blog').click (e) ->
       $.post($(this).data('href'), {}).done (data) ->
         return $('.like_count').html data['likes']
-  
-  $('.published_at_date').fdatepicker()
+
+  $('.published_at_date').datepicker({ dateFormat: 'yy-mm-dd' })
