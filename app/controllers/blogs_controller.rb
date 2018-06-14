@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :check_authorization
+  before_action :check_authorization, except: [:show, :index]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
   layout "blog_application"
 
