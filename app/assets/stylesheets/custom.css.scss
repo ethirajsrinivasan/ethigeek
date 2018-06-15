@@ -1,7 +1,7 @@
 body {
 	background: #282d32 !important;
 	.main-intro {
-		padding: 18em 0 18em 0em;
+		padding: 10em 0 10em 0em;
 		h3,h5 {
 			color:white !important;
 		    font-family: 'Raleway', sans-serif;
@@ -144,4 +144,12 @@ a{
 }
 .node--internal text {
     text-shadow: none !important;
-    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.main-intro {
+	padding: 18em 0 18em 0em !important;
+	}
+
+}
