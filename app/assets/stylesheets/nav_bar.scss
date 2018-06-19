@@ -28,7 +28,7 @@ body {
 	}
 
 }
-.fixed-top.scrolled {
+.fixed-top.scrolled,.nav-icon-background {
   background-color: #b8b8b8 !important;
   transition: background-color 200ms linear;
   box-shadow: 0 0 3px 0     rgba(0 ,0 ,0 ,0.1) !important;
@@ -51,14 +51,6 @@ body {
 .navbar-toggler {
 	border: none !important;
 }
-
-.nav-icon-background {
-	background-color: #b8b8b8 !important;
-	transition: background-color 200ms linear;
-	box-shadow: 0 0 3px 0   rgba(0 ,0 ,0 ,0.1) !important;
-}
-
-
 
 .scroll-section{
 	height: auto;
