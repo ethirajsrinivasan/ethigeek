@@ -15,3 +15,7 @@ $ ->
   $('.filters input[type=radio]').change ->
     $.get($(this).data('href'), {type: $(this).val()}).done (data) ->
       $(".portfolio_container").html($(data).html())
+
+  $('.navbar-toggler-icon').click ->
+	  $nav = $('.fixed-top')
+	  $nav.toggleClass 'nav-icon-background'

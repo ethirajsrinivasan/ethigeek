@@ -4,7 +4,7 @@ body {
 		padding: 10em 0 10em 0em;
 		h3,h5 {
 			color:white !important;
-		    font-family: 'Raleway', sans-serif;
+			font-family: 'Raleway', sans-serif;
 		}
 	}
 }
@@ -20,8 +20,8 @@ body.plain {
 	color: white !important
 }
 h1, h2, h3, h4, h5, h6 {
-    color: #323232 !important;
-    font-family: 'Raleway', sans-serif !important;
+	color: #323232 !important;
+	font-family: 'Raleway', sans-serif !important;
 }
 a{
 	&:hover {
@@ -31,8 +31,8 @@ a{
 .scroll-section {
 	color: white;
 	h1, h2, h3, h4, h5, h6 {
-    color: white !important;
-    font-family: 'Raleway', sans-serif !important;
+	color: white !important;
+	font-family: 'Raleway', sans-serif !important;
 	text-transform: uppercase;
 	}
 	.card-img-top{
@@ -42,7 +42,7 @@ a{
 	margin: 2em;
 	}
 	.blog_title{
-		margin-top: 1em;
+		margin: 1em 0;
 		font-style: italic;
 	}
 	.section_header{
@@ -51,17 +51,17 @@ a{
 }
 .footer {
 	position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #b8b8b8;
-    .list-inline-item {
-    	padding-right:  1em;
-    	padding-left:  1em;
-    	padding-top: 1em;
-    	a {
-    	color: #323232;
-    	}
-    }
+	bottom: 0;
+	width: 100%;
+	background-color: #b8b8b8;
+	.list-inline-item {
+		padding-right:  1em;
+		padding-left:  1em;
+		padding-top: 1em;
+		a {
+		color: #323232;
+		}
+	}
 }
 .blog_body {
 	.cover {
@@ -72,10 +72,10 @@ a{
 		h3 {
 			color:white !important;
 			text-transform: uppercase;
-		    font-family: 'Raleway', sans-serif;
-		    .title{
-		    	letter-spacing: .5em;
-		    }
+			font-family: 'Raleway', sans-serif;
+			.title{
+				letter-spacing: .5em;
+			}
 		}
 	}
 	.blog_list {
@@ -84,8 +84,8 @@ a{
 		}
 	}
 	h1, h2, h3, h4, h5, h6 {
-    color: white !important;
-    font-family: 'Raleway', sans-serif !important;
+	color: white !important;
+	font-family: 'Raleway', sans-serif !important;
 	}
 
 	article {
@@ -111,8 +111,8 @@ a{
 		color: white;
 	}
 	h1, h2, h3, h4, h5, h6 {
-    	color: white !important;
-    	font-family: 'Raleway', sans-serif !important;
+		color: white !important;
+		font-family: 'Raleway', sans-serif !important;
 	}
 }
 .img-med {
@@ -134,16 +134,22 @@ a{
 		display: inherit !important;
 	}
 	a {
-    	border: none !important;
-    }
+		border: none !important;
+	}
 	a:hover, .flickr_pagination a:focus {
-      background: inherit !important;
-      color: #f27e25 !important;
-    }
-    margin-bottom: 1em;
+	  background: inherit !important;
+	  color: #f27e25 !important;
+	}
+	margin-bottom: 1em;
 }
 .node--internal text {
-    text-shadow: none !important;
+	text-shadow: none !important;
+}
+
+#portfolio {
+	img {
+		margin: 1.5em
+	}
 }
 
 // Large devices (desktops, 992px and up)

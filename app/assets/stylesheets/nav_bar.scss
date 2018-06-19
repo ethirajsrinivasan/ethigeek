@@ -24,14 +24,14 @@ body {
 	}
 	.navbar-brand {
 		font-family: 'Alex Brush',cursive;
-    font-size: 30px;
+	font-size: 30px;
 	}
 
 }
 .fixed-top.scrolled {
   background-color: #b8b8b8 !important;
   transition: background-color 200ms linear;
-  box-shadow: 0 0 3px 0 	rgba(0 ,0 ,0 ,0.1) !important;
+  box-shadow: 0 0 3px 0     rgba(0 ,0 ,0 ,0.1) !important;
   a.nav-link {
 		color: black !important;
 		&:hover {
@@ -47,6 +47,15 @@ body {
 	a.nav-link.active{
 		color: #f27e25 !important
 	}
+}
+.navbar-toggler {
+	border: none !important;
+}
+
+.nav-icon-background {
+	background-color: #b8b8b8 !important;
+	transition: background-color 200ms linear;
+	box-shadow: 0 0 3px 0   rgba(0 ,0 ,0 ,0.1) !important;
 }
 
 
@@ -67,7 +76,7 @@ body {
 		}
 		.nav-link {
 			font-size: .85em;
-	    padding: 1.5em 1em 1em 1em!important;
+		padding: 1.5em 1em 1em 1em!important;
 		}
 	}
 
