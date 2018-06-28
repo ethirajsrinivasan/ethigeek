@@ -5,7 +5,7 @@ module ApplicationHelper
 		elsif params[:controller] == "blogs" && params[:action] == "show"
 			@blog.picture
 		else
-			image_path("welcome.jpg")
+			image_path("ai.jpeg")
 		end
 	end
 
