@@ -59,17 +59,6 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="container">
-				<div class="row intro justify-content-center">
-					<div class="col">
-						<% if content_for(:blog_title) %>
-							<%= yield(:blog_title) %>
-						<% else %>
-							<h3><span class="title">blog</span></h3>
-						<% end %>
-					</div>
-				</div>
-			</div>
 		</section>
 		<%= yield %>
 		<div class="spacer"></div>
