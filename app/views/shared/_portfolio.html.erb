@@ -11,7 +11,7 @@
 				<%= image_tag("https://assets-ethi.appspot.com/images/ml.png",height:"250") %>
 			</div>
 			<div class="col-md-6 my-auto col-sm-12">
-				<p class="text-justify"> I extensively built my knowledge on Machine learning through academic and prefessional work. Some of my machine learning projects are listed below</p>
+				<p class="text-justify"> I extensively built my knowledge on Machine learning through academic and professional work. Some of my machine learning projects are listed below</p>
 				<ul class="text-left">
 					<% @ml_projects.each do |project| %>
 				  		<li><%= link_to project.title.titleize, portfolios_path(title: project.title), target: "_blank" %></li>
