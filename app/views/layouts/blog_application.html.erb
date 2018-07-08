@@ -10,6 +10,15 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<% if params[:action] == "show" %>
+			<script>
+			  (adsbygoogle = window.adsbygoogle || []).push({
+			    google_ad_client: "ca-pub-8495931515801704",
+			    enable_page_level_ads: true
+			  });
+			</script>
+		<% end %>
 		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
 		<%= favicon_link_tag 'favicon.ico' %>
