@@ -23,6 +23,9 @@ class Blog < ApplicationRecord
     @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
                      path: content_url,
                      accept: 'application/vnd.github.v3.html')
+    doc = Nokogiri::HTML(@content)
+    doc.search('img').wrap("<div class='text-center'>")
+    @content = doc.to_s
   end
 
   def next
