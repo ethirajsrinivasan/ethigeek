@@ -11,12 +11,12 @@
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="https://d3js.org/d3.v4.min.js"></script>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<% if params[:action] == "show" %>
+		<% if  params[:controller] == "blog" and params[:action] == "show" %>
 			<script>
-			  (adsbygoogle = window.adsbygoogle || []).push({
-			    google_ad_client: "ca-pub-8495931515801704",
-			    enable_page_level_ads: true
-			  });
+				(adsbygoogle = window.adsbygoogle || []).push({
+					google_ad_client: "ca-pub-8495931515801704",
+					enable_page_level_ads: true
+				});
 			</script>
 		<% end %>
 		<%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -59,25 +59,38 @@
 					</ul>
 				</div>
 			</nav>
+			<% if params[:controller] == "home" and params[:action] == "show" %>
+				<div class="container">
+					<div class="row intro justify-content-center">
+						<div class="col">
+							<% if content_for(:blog_title) %>
+								<%= yield(:blog_title) %>
+							<% else %>
+								<h3><span class="title">blog</span></h3>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			<% end %>
 		</section>
 		<%= yield %>
 		<div class="spacer"></div>
 		<footer class="footer fixed-bottom">
-	      <div class="container">
-	        <ul class="list-inline d-flex justify-content-center">
+				<div class="container">
+					<ul class="list-inline d-flex justify-content-center">
 				<li class="list-inline-item"><a target="_blank" class="fab fa-github" href="https://github.com/ethirajsrinivasan"></a></li>
 				<li class="list-inline-item"><a target="_blank" class="fab fa-twitter" href="https://twitter.com/iamethi"></a></li>
 				<li class="list-inline-item"><a target="_blank" class="fab fa-linkedin" href="https://in.linkedin.com/in/ethirajsrinivasan"></a></li>
 			</ul>
-	      </div>
-	    </footer>
+				</div>
+			</footer>
 	</body>
 	<script>
-    	AOS.init({
-	      offset: 200,
-	      duration: 600,
-	      easing: 'ease-in-sine',
-	      delay: 100,
-	    });
-  	</script>
+		AOS.init({
+			offset: 200,
+			duration: 600,
+			easing: 'ease-in-sine',
+			delay: 100,
+		});
+	</script>
 </html>
