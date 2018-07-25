@@ -16,7 +16,12 @@ Ethi.Databases.PostgreSQL,3.5,#E58E00
 Ethi.Databases.SQLite,3,#12658A
 Ethi.Databases.MySQL,3,#34691A
 Ethi.Databases.MongoDB,3.5,#56678A
+Ethi.Databases.Neo4j,3,#72563A
+Ethi.Databases.Hive,3,#93478C
 Ethi.Frameworks,
+Ethi.Frameworks.Big Data,
+Ethi.Frameworks.Big Data.Hadoop,3,#67489D
+Ethi.Frameworks.Big Data.Spark,3,#923525
 Ethi.Frameworks.Back End,
 Ethi.Frameworks.Back End.Ruby on Rails,4.5,#59666C
 Ethi.Frameworks.Back End.Sinatra,3,#808080
@@ -31,6 +36,11 @@ Ethi.Technologies,
 Ethi.Technologies.Solr,3,#005F0F
 Ethi.Technologies.Redis,3.5,#E58E00
 Ethi.Technologies.Memcached,3,#00618A
+Ethi.Technologies.Kafka,3,#125643
+Ethi.Technologies.Flume,3,#945822
+Ethi.Technologies.Kinesis,4,#365289
+Ethi.Technologies.Pub Sub,4,#904528
+Ethi.Technologies.Sqoop,3,#3589DF
 Ethi.Tools,
 Ethi.Tools.Git,4,#808080
 Ethi.Tools.R Studio,3,#717130
