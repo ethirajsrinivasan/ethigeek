@@ -1,4 +1,4 @@
-<% cache @blog %>
+<% cache @blog do %>
   <% content_for :title,  @blog.title.titleize %>
   <% content_for :blog_title do %>
   <h3><%= @blog.title.titleize %></h3>
