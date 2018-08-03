@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'dalli'
+
 gem 'rails-controller-testing'
 gem 'rails-settings-cached'
 gem "octokit"
