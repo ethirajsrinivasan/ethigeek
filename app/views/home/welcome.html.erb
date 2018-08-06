@@ -1,4 +1,4 @@
-<% cache "welcome", expires_in: 24.hours do %>
+<% cache "welcome", expires_in: valid_user? ? 30.seconds : 24.hours do %>
   <!DOCTYPE html>
   <html lang="en">
     <head>
