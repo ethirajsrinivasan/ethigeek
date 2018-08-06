@@ -19,7 +19,11 @@ class HomeController < ApplicationController
   end
 
   def show
-    @project = Project.active.includes(:sections).find_by_title(params[:title])
+    if valid_user?
+      @project = Project.includes(:sections).find_by_title(params[:title])
+    else
+      @project = Project.active.includes(:sections).find_by_title(params[:title])
+    end
     @previous_project = @project.previous
     @next_project = @project.next
     render "show", layout: "blog_application"
