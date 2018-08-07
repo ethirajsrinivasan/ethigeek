@@ -48,6 +48,7 @@ class SectionsController < ApplicationController
   def update
     respond_to do |format|
       if @section.update(section_params)
+        @section.project.touch
         format.html { redirect_to @section, notice: 'Section was successfully updated.' }
         format.json { render :show, status: :ok, location: @section }
       else
@@ -60,6 +61,7 @@ class SectionsController < ApplicationController
   # DELETE /sections/1
   # DELETE /sections/1.json
   def destroy
+    @section.project.touch
     @section.destroy
     respond_to do |format|
       format.html { redirect_to sections_url, notice: 'Section was successfully destroyed.' }
