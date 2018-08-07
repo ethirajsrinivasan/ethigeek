@@ -9,7 +9,7 @@ class SectionsController < ApplicationController
       @sections = Section.where(project_id:Project.where(order:params[:order_id]).first.id)
     else
       @sections = Section.all
-    end 
+    end
   end
 
   # GET /sections/1
@@ -33,6 +33,7 @@ class SectionsController < ApplicationController
 
     respond_to do |format|
       if @section.save
+        @section.project.touch
         format.html { redirect_to new_section_path, notice: 'Section was successfully created.' }
         format.json { render :show, status: :created, location: @section }
       else
