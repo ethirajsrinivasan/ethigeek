@@ -4,30 +4,32 @@
 <div class="published_at"><%= @blog.published_at.strftime("%b %d, %Y")%> &middot; <%= (@blog.content.split(" ").count * (0.8/300)).ceil %> min read</div>
 <% end %>
 <br>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col">
-      <% image_tag "https://assets-ethi.appspot.com/images/mypic.jpg" ,size:"50x50", alt:"Picture", class: "left profile"%>
-      <%= @blog.content.html_safe %>
-      <div class="text-center like_blog" data-href=<%= "#{like_blog_path(@blog)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
-      <div class="text-center like_count"><%= @blog.likes %></div>
-      <div class="row">
-        <div class="col">
-          <% if @previous_blog %>
-          <div class="float-left">
-            <div class="project_nav_link"><%= @previous_blog.title.titleize %></div>
-            <%= link_to "&larr; Previous Blog".html_safe, @previous_blog %>
+<% cache @blog do %>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col">
+        <% image_tag "https://assets-ethi.appspot.com/images/mypic.jpg" ,size:"50x50", alt:"Picture", class: "left profile"%>
+        <%= @blog.content.html_safe %>
+        <div class="text-center like_blog" data-href=<%= "#{like_blog_path(@blog)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
+        <div class="text-center like_count"><%= @blog.likes %></div>
+        <div class="row">
+          <div class="col">
+            <% if @previous_blog %>
+            <div class="float-left">
+              <div class="project_nav_link"><%= @previous_blog.title.titleize %></div>
+              <%= link_to "&larr; Previous Blog".html_safe, @previous_blog %>
+            </div>
+            <% end %>
+            <% if @next_blog %>
+            <div class="float-right">
+              <div class="project_nav_link"><%= @next_blog.title.titleize %></div>
+              <%= link_to "Next Blog &rarr; ".html_safe, @next_blog %>
+            </div>
+            <% end %>
           </div>
-          <% end %>
-          <% if @next_blog %>
-          <div class="float-right">
-            <div class="project_nav_link"><%= @next_blog.title.titleize %></div>
-            <%= link_to "Next Blog &rarr; ".html_safe, @next_blog %>
-          </div>
-          <% end %>
         </div>
+        <%= render "shared/disqus" %>
       </div>
-      <%= render "shared/disqus" %>
     </div>
   </div>
-</div>
+<% end %>

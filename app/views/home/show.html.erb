@@ -3,6 +3,7 @@
 <h3><%= @project.title.titleize %></h3>
 <% end %>
 <br>
+<% cache @project do %>
 <div class="container project">
   <div class="row">
     <div class="col">
@@ -47,3 +48,4 @@
     </div>
   </div>
 </div>
+<% end %>
