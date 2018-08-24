@@ -147,7 +147,7 @@ $( document ).ready(function() {
                 var ballGMovement = ballG.transition()
                         .duration(400)
                         .attr("transform", "translate(" + (d.y
-                                + xScale(d.data.value) + 90) + ","
+                                + xScale(d.data.value) + 82) + ","
                                 + (d.x + 1.5) + ")");
 
                 ballGMovement.select("circle")
