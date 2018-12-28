@@ -11,6 +11,8 @@ Ethi.Front End.HTML & CSS,4,#EB2C2F
 Ethi.Front End.Javascript,3.5,#617CBE
 Ethi.Front End.Jquery,4,#6DB33F
 Ethi.Front End.Coffeescript,3.5,#563B7E
+Ethi.Front End.Bootstrap,3.5,#4E7C93
+Ethi.Front End.Foundation Zurb,3.5,#60934E
 Ethi.Databases,
 Ethi.Databases.PostgreSQL,3.5,#E58E00
 Ethi.Databases.SQLite,3,#12658A
@@ -28,8 +30,6 @@ Ethi.Frameworks.Back End.Sinatra,3,#808080
 Ethi.Frameworks.Back End.Vertx,3.5,#FF9900
 Ethi.Frameworks.Back End.Flask,3,#524B6E
 Ethi.Frameworks.Front End,
-Ethi.Frameworks.Front End.Bootstrap,3.5,#4E7C93
-Ethi.Frameworks.Front End.Foundation Zurb,3.5,#60934E
 Ethi.Frameworks.Mobile,
 Ethi.Frameworks.Mobile.Android,3.5,#0073AD
 Ethi.Technologies,
