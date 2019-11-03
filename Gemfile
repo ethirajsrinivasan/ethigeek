@@ -39,7 +39,7 @@ gem 'rails-controller-testing'
 gem 'rails-settings-cached'
 gem "octokit"
 gem 'friendly_id'
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'httparty'
 gem 'will_paginate'
 gem 'jquery-ui-rails'
