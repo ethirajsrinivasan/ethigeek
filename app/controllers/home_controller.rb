@@ -8,16 +8,6 @@ class HomeController < ApplicationController
     render "welcome", layout: false
   end
 
-  def resume
-    link = "http://assets-ethi.appspot.com/files/resume.pdf"
-    url = URI.parse(link)
-    req = Net::HTTP::Get.new(url.to_s)
-    res = Net::HTTP.start(url.host, url.port) {|http|
-      http.request(req)
-    }
-    send_data(res.body, :type => 'application/pdf', :disposition => 'inline')
-  end
-
   def show
     if valid_user?
       @project = Project.includes(:sections).find_by_title(params[:title])
