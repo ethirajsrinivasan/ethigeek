@@ -17,5 +17,6 @@ $ ->
       $(".portfolio_container").html($(data).html())
 
   $('.navbar-toggler-icon').click ->
-	  $nav = $('.fixed-top')
+	  $nav = $('.navbar')
 	  $nav.toggleClass 'nav-icon-background'
+     

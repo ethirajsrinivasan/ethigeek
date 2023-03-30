@@ -1,21 +1,29 @@
 <div class="container">
 	<div class="spacer"></div>
-	<div class="row justify-content-center">
-	  	<div class="col blog_list text-center">
-			<% @blogs.each do |blog| %>
-		  		<div>
-		  			<h3><b><%= link_to blog.title, blog %></b></h3>
-		  			<h6><b><%= blog.published_at.strftime("%b %d, %Y") %></b></h6>
+	<div id="blogs" class="row justify-content-center">
+		<% @blogs.each do |blog| %>
+		<div class="col-lg-4 col-md-10 col-sm-10">
+			<div class="row justify-content-center">
+				<div class="col-12">
+					<%=image_tag(blog.picture,class:"img-tile") %>
+					<br>
+					<br>
+					<div class="fs-6"><%= blog.published_at.strftime("%b %d, %Y")%></div>
+					<div class="fs-5 blog_title"><%= link_to blog.title, blog, class:"blog_post_header" %></div>
+					<div class="fs-6 fw-light blog_short_content"><%= "#{blog.short_content.first(200)} ..." %> </div>
+					<%= link_to blog, class:"float-end" do %>Read More &#x2192<% end %>
 				</div>
-				<br>
-			<% end %>
-	  	</div>
+			</div>
+			<br>
+			<br>
+		</div>
+		<% end %>
 	</div>
 	<div class="row justify-content-center">
 		<div class="col text-center">
-	  		<div class="flickr_pagination">
+			<div class="flickr_pagination">
 				<%= will_paginate @blogs %>
-	  		</div>
-	  	</div>
+			</div>
+		</div>
 	</div>
 </div>

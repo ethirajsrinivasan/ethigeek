@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
   validates :state,        inclusion: { in: ['draft', 'published'] }
   validates :published_at, presence: true, if: :published?
 
-  self.per_page = 10
+  self.per_page = 9
   default_scope { order(published_at: :desc) }
   scope :published, -> {where(state: "published")}
 
@@ -20,13 +20,26 @@ class Blog < ApplicationRecord
   end
 
   def content
-    @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
-                     path: content_url,
-                     accept: 'application/vnd.github.v3.html')
-    doc = Nokogiri::HTML(@content)
-    doc.search('img').wrap("<div class='text-center'>")
-    @content = doc.to_s
+    Rails.cache.fetch("blog_#{title}") do
+      @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
+                                              path: content_url,
+                                              accept: 'application/vnd.github.v3.html')
+      doc = Nokogiri::HTML(@content)
+      doc.search('img').wrap("<div class='text-center'>")
+      @content = doc.to_s
+    end
   end
+
+  def short_content
+    Rails.cache.fetch("blog_#{title}_short_content") do
+      @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
+                                              path: content_url,
+                                              accept: 'application/vnd.github.v3.html')
+      Nokogiri::HTML(@content).css("p").first.children.text
+    end
+  end
+
+
 
   def next
     self.class.published.where('"blogs"."published_at" < ?', published_at).first
