@@ -3,9 +3,8 @@ Ethi,
 Ethi.Programing Language,
 Ethi.Programing Language.Ruby,4.5,#E54F24
 Ethi.Programing Language.Python,4,#D6BA33
-Ethi.Programing Language.Java,3.5,#1169AE
+Ethi.Programing Language.Java,4,#1169AE
 Ethi.Programing Language.Scala,3,#876543
-Ethi.Programing Language.R,3,#F6854D
 Ethi.Front End,
 Ethi.Front End.HTML & CSS,4,#EB2C2F
 Ethi.Front End.Javascript,3.5,#617CBE
@@ -18,7 +17,6 @@ Ethi.Databases.PostgreSQL,3.5,#E58E00
 Ethi.Databases.SQLite,3,#12658A
 Ethi.Databases.MySQL,3,#34691A
 Ethi.Databases.MongoDB,3.5,#56678A
-Ethi.Databases.Neo4j,3,#72563A
 Ethi.Databases.Hive,3,#93478C
 Ethi.Frameworks,
 Ethi.Frameworks.Big Data,
@@ -42,9 +40,7 @@ Ethi.Technologies.Kinesis,4,#365289
 Ethi.Technologies.Pub Sub,4,#904528
 Ethi.Tools,
 Ethi.Tools.Git,4,#808080
-Ethi.Tools.R Studio,3,#717130
 Ethi.Tools.Eclipse,3.5,#00A0D2
-Ethi.Tools.Android Studio,3,#0678BE
 Ethi.Hosting / Deployment,
 Ethi.Hosting / Deployment.Amazon Web Services,4,#808080
 Ethi.Hosting / Deployment.Heroku,3.5,#234803

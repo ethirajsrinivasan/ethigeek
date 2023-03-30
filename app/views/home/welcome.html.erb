@@ -14,17 +14,16 @@
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8495931515801704"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   </head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
-<script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HN948EZZ"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-S8HN948EZZ');
-</script>
+  </script>
   <body data-spy="scroll" data-target="#navbar-scrollspy" data-offset="200">
     <section class="cover text-center img-fluid" style="background-image: url(<%= "#{header_image}" %>)">
       <nav class="navbar fixed-top navbar-expand-lg navbar-trans navbar-light">
@@ -41,18 +40,23 @@
               <a class="nav-link" href="/blogs">Blog</a>
               <a class="nav-link" href="#contact">Contact</a>
               <% if valid_user? %>
-            <li class="nav-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete,class: "nav-link" %></li>
-            <% end %>
+              <li class="nav-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete,class: "nav-link" %></li>
+              <% end %>
             </div>
           </div>
         </div>
       </nav>
       <div data-aos="zoom-in" class="container">
         <div class="row main-intro justify-content-center">
+          <div class="col-lg-2 col-md-2 col-sm-2 text-center">
+            <img class="img-fluid myphoto" src="/assets/my_photo.jpeg" alt="myphoto"/>
+          </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
           <div class="col">
-            <h3>I am Ethiraj Srinivasan</h3>
-            <h5>Big Data Engineer, Machine Learning & Open Source enthusiast</h5>
-            <h5> who loves to play with data & product.</h5>
+            <h5 class="text-white">I am Ethiraj Srinivasan</h5>
+            <h5 class="text-white">Data Engineer & Machine Learning Enthusiast</h5>
           </div>
         </div>
       </div>
