@@ -7,29 +7,46 @@
 <% cache @blog do %>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col">
+    <div class="col-md-8">
       <% image_tag "https://assets-ethi.appspot.com/images/mypic.jpg" ,size:"50x50", alt:"Picture", class: "left profile"%>
       <%= @blog.content.html_safe %>
-      <div class="text-center like_blog" data-href=<%= "#{like_blog_path(@blog)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
-      <div class="text-center like_count"><%= @blog.likes %></div>
-      <div class="row">
-        <div class="col">
-          <% if @previous_blog %>
-          <div class="float-start">
-            <div class="project_nav_link"><%= @previous_blog.title.titleize %></div>
-            <%= link_to "&larr; Previous Blog".html_safe, @previous_blog %>
-          </div>
-          <% end %>
-          <% if @next_blog %>
-          <div class="float-end">
-            <div class="project_nav_link"><%= @next_blog.title.titleize %></div>
-            <%= link_to "Next Blog &rarr; ".html_safe, @next_blog %>
-          </div>
-          <% end %>
-        </div>
-      </div>
-      <%= render "shared/disqus" %>
     </div>
   </div>
+    <div class="row justify-content-center">
+      . . .
+    </div>
+  <div class="row justify-content-center contact">
+    <div class="text-center">
+      Follow Me on:
+      <a href="https://medium.com/@ethi"><i class="fab fa-medium"></i> Medium </a>
+      <a href="https://www.youtube.com/channel/UCkdAJA03TJXhb_tNjTyl_nA?sub_confirmation=1"><i class="fab fa-youtube"></i> Youtube </a>
+      <a href="https://www.instagram.com/ethirajchandru/"><i class="fab fa-instagram"></i> Instagram </a>
+      <a href="https://www.linkedin.com/in/ethirajsrinivasan/"><i class="fab fa-linkedin"></i>
+      LinkedIn </a>
+      <a href="https://github.com/ethirajsrinivasan/"><i class="fab fa-github"></i><span> Github </a>
+      <a href="https://twitter.com/iamethi"><i class="fab fa-twitter"></i> Twitter </a>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col">
+      <% if @previous_blog %>
+      <div class="float-start">
+        <div class="project_nav_link"><%= @previous_blog.title.titleize %></div>
+        <%= link_to "&larr; Previous Blog".html_safe, @previous_blog %>
+      </div>
+      <% end %>
+      <% if @next_blog %>
+      <div class="float-end">
+        <div class="project_nav_link"><%= @next_blog.title.titleize %></div>
+        <%= link_to "Next Blog &rarr; ".html_safe, @next_blog %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <%= render "shared/disqus" %>
+</div>
+</div>
 </div>
 <% end %>
