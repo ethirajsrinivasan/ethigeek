@@ -1,7 +1,7 @@
 body {
     background: #fffff !important;
     .main-intro {
-        padding: 10em 0 10em 0em;
+        padding: 5em 0 0em 0em;
         h3,h5 {
             color:white !important;
             font-family: 'Raleway', sans-serif;
@@ -102,11 +102,12 @@ a{
     padding:2em;
 }
 .skills {
-    .img-fluid {
-        padding:1em 0;
-    }
     text {
         fill: black !important
+    }
+    .img-fluid {
+        margin-bottom: 6em;
+        overflow: inherit;
     }
 }
 .project {
@@ -158,7 +159,7 @@ a{
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .main-intro {
-    padding: 18em 0 18em 0em !important;
+    padding: 10em 0 0em 0em !important;
     }
 
 }
@@ -166,12 +167,12 @@ a{
     color: black;
 }
 
-#about {
-    .myphoto {
+
+.myphoto {
     border-radius: 5em;
     width: 150px
-    }
 }
+
 
 a {
     text-decoration: auto !important
