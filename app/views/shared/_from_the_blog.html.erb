@@ -1,28 +1,31 @@
 <div data-aos="fade-right" id="blogs" class="scroll-section">
 	<div class="container">
 		<div  class="row justify-content-between">
-				<div class="col-md-6 col-sm-12 my-auto">
-				<h3 class="section_header ">From the Blog</h3></div>
-				<div class="col-md-6 col-sm-12 my-auto">
-				<h6 class="section_header float-md-end"><%= link_to blogs_path, class:"float-end" do %>View All &#x2192<% end %></h6></div>
-		</div>
-		<div class="row text-center">
-			<% @blogs.each do |blog| %>
-				<div class="col-lg-4 col-md-10 col-sm-10">
-			<div class="row justify-content-center">
-				<div class="col-12">
-					<%=image_tag(blog.picture,class:"img-tile") %>
-					<br>
-					<br>
-					<div class="fs-6"><%= blog.published_at.strftime("%b %d, %Y")%></div>
-					<div class="fs-5 blog_title"><%= link_to blog.title, blog, class:"blog_post_header" %></div>
-					<div class="fs-6 fw-light blog_short_content"><%= "#{blog.short_content.first(200)} ..." %> </div>
-					<%= link_to blog, class:"float-end" do %>Read More &#x2192<% end %>
-					<br>
-					<br>
-				</div>
+			<div class="col-md-6 col-sm-12 my-auto">
+				<h3 class="section_header ">From the Blog</h3>
+			</div>
+			<div class="col-md-6 col-sm-12 my-auto">
+				<div class="float-md-end"><%= link_to blogs_path, class:"float-end" do %>View All &#x2192<% end %></div>
 			</div>
 		</div>
+		<br>
+		<div class="row text-center">
+			<% @blogs.each do |blog| %>
+			<div class="col-lg-4 col-md-10 col-sm-10">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<%=image_tag(blog.picture,class:"img-tile") %>
+						<br>
+						<br>
+						<div class="fs-6"><%= blog.published_at.strftime("%b %d, %Y")%></div>
+						<div class="fs-5 blog_title"><%= link_to blog.title, blog, class:"blog_post_header" %></div>
+						<div class="fs-6 fw-light blog_short_content"><%= "#{blog.short_content.first(200)} ..." %> </div>
+						<%= link_to blog, class:"float-end" do %>Read More &#x2192<% end %>
+						<br>
+						<br>
+					</div>
+				</div>
+			</div>
 			<% end %>
 		</div>
 	</div>
