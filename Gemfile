@@ -33,6 +33,8 @@ gem 'jbuilder'
 
 gem 'dalli'
 
+gem 'faraday-retry'
+
 gem 'rails-controller-testing'
 gem 'rails-settings-cached'
 gem "octokit"
