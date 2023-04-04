@@ -7,3 +7,17 @@ $ ->
         return $('.like_count').html data['likes']
 
   $('.published_at_date').datepicker({ dateFormat: 'yy-mm-dd' })
+
+
+  $('pre').prepend '<i class="far fa-copy float-end btn"> Copy</i>'
+
+  $('.snippet-clipboard-content').addClass 'snippet-clipboard-content-background'
+
+
+  $('i.far.fa-copy').click ->
+    navigator.clipboard.writeText($(this).parent().text().slice(5))
+    $(this).text(" Copied")
+
+  $('i.far.fa-copy').mouseout ->
+    $(this).text(" Copy")  
+
