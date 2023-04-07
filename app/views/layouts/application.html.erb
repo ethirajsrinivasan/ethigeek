@@ -35,10 +35,9 @@
 					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div class="navbar-nav ms-auto">
 							<a class="nav-link" href="/resume" target="_blank">Resume</a>
-							<a class="nav-link" href="#about">About</a>
 							<a class="nav-link" href="#portfolio">Portfolio</a>
 							<a class="nav-link" href="#blogs">Blog</a>
-							<a class="nav-link" href="#contact">Contact</a>
+							<a class="nav-link" href="/about">About</a>
 							<% if valid_user? %>
 							<li class="nav-item"><%= link_to 'Log Out', destroy_user_session_path, method: :delete,class: "nav-link" %></li>
 							<% end %>

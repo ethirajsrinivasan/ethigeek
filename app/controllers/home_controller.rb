@@ -26,4 +26,12 @@ class HomeController < ApplicationController
     @project.save!
     render json: { status: :ok, likes: @project.likes }.to_json
   end
+
+  def about
+     render "about", layout: "blog_application"
+  end
+
+  def gadgets_and_accessories
+    render "gadgets_and_accessories", layout: "blog_application"
+  end
 end
