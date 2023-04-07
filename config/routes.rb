@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   root "home#welcome"
   get "/portfolio", to: "home#portfolio"
   get "/contact", to: "home#contact"
-  get "/about", to: "home#about"
+  get "/about", action: :about, controller: 'home'
+  get "/gadgets", action: :gadgets_and_accessories, controller: 'home'
   get "/resume", to: redirect('/resume.pdf')
   get "/portfolios/:title", to: "home#show", as: 'portfolios'
   post "/portfolios/:title/like", to: "home#like", as: 'portfolios_like'

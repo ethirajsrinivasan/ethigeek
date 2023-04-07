@@ -4,6 +4,10 @@ module ApplicationHelper
 			image_path("blogs.jpg")
 		elsif params[:controller] == "blogs" && params[:action] == "show"
 			@blog.picture
+		elsif params[:controller] == "home" && params[:action] == "about"
+			image_path("mbs.avif")
+		elsif params[:controller] == "home" && params[:action] == "gadgets_and_accessories"
+			image_path("gadgets.avif")
 		else
 			image_path("ai.jpg")
 		end
