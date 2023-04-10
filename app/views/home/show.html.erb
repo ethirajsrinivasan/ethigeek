@@ -1,51 +1,30 @@
-<% content_for :title, @project.title.titleize %>
+<% content_for :title, @project.title %>
 <% content_for :blog_title do %>
-<h3><%= @project.title.titleize %></h3>
+<h3><%= @project.title %></h3>
 <% end %>
 <br>
-<% cache @project do %>
 <div class="container project">
   <div class="row">
     <div class="col">
-      <!-- <aside class="about" style="background-color: <%= @project.color %>">
-        <%= render "metadata", attribute: @project.duration, title: "Date" %>
-        <%= render "metadata", attribute: @project.role, title: "Role" %>
-        <%= render "metadata", attribute: @project.tools, title: "Tools " %>
-        <%= render "metadata", attribute: @project.tasks, title: "Tasks" %>
-        <%= render "metadata", attribute: @project.team, title: "Team" %>
-        <%= render "metadata", attribute: @project.platform, title: "Platform" %>
-        <%= render "metadata", attribute: @project.collaborators, title: "Collaborators" %>
-      </aside> -->
       <% @project.sections.each do |section| %>
-      <section  data-aos="fade-right">
-        <h3><%= section.title %></h3>
-        <div class="section-content"><%= section.content.html_safe %></div>
-      </section>
+        <section  data-aos="fade-right">
+          <h3><%= section.title %></h3>
+          <div class="section-content"><%= section.content.html_safe %></div>
+        </section>
       <% end  %>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col">
-      <div class="text-center like_blog" data-href=<%= "#{portfolios_like_path(title: @project.title)}" %> ><%= image_tag("https://assets-ethi.appspot.com/images/heart.png",size: 25) %></div>
-      <div class="text-center like_count"><%= @project.likes %></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
       <% if @previous_project %>
-      <div class="float-start">
-        <div class="project_nav_link"><%= @previous_project.title.titleize %></div>
-        <%= link_to "&larr; Previous project".html_safe, portfolios_path(title: @previous_project.title) %>
-      </div>
+        <div class="float-start mt-4">
+          <div class="project_nav_link"><%= @previous_project.title %></div>
+          <%= link_to "&larr; Previous project".html_safe, portfolios_path(title: @previous_project.title) %>
+        </div>
       <% end %>
       <% if @next_project %>
-      <div class="float-end">
-        <div class="project_nav_link"><%= @next_project.title.titleize %></div>
-        <%= link_to "Next project &rarr; ".html_safe, portfolios_path(title: @next_project.title) %>
-      </div>
+        <div class="float-end mt-4">
+          <div class="project_nav_link"><%= @next_project.title %></div>
+          <%= link_to "Next project &rarr; ".html_safe, portfolios_path(title: @next_project.title) %>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
-<% end %>
+<br>
