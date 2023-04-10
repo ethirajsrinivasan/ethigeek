@@ -1,6 +1,6 @@
-<% content_for :title,  @blog.title.titleize %>
+<% content_for :title,  @blog.title %>
 <% content_for :blog_title do %>
-<h3><%= @blog.title.titleize %></h3>
+<h3><%= @blog.title %></h3>
 <div class="published_at"><%= @blog.published_at.strftime("%b %d, %Y")%> &middot; <%= (@blog.content.split(" ").count * (0.8/300)).ceil %> min read</div>
 <% end %>
 <br>
@@ -32,14 +32,14 @@
   <div class="row">
     <div class="col">
       <% if @previous_blog %>
-      <div class="float-start">
-        <div class="project_nav_link"><%= @previous_blog.title.titleize %></div>
+      <div class="float-start mt-4">
+        <div class="project_nav_link"><%= @previous_blog.title %></div>
         <%= link_to "&larr; Previous Blog".html_safe, @previous_blog %>
       </div>
       <% end %>
       <% if @next_blog %>
-      <div class="float-end">
-        <div class="project_nav_link"><%= @next_blog.title.titleize %></div>
+      <div class="float-end mt-4">
+        <div class="project_nav_link"><%= @next_blog.title %></div>
         <%= link_to "Next Blog &rarr; ".html_safe, @next_blog %>
       </div>
       <% end %>
