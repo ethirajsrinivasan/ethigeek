@@ -46,7 +46,7 @@ class Blog < ApplicationRecord
   end
 
   def previous
-    self.class.published.where('"blogs"."published_at" > ?', published_at).first
+    self.class.published.where('"blogs"."published_at" > ?', published_at).last
   end
 
 end
