@@ -12,7 +12,8 @@
 			overflow: auto;
 			font-size: 1em;
 			background: #e4e4e4;
-			border-radius: .75em;
+			border-bottom-left-radius: .75em;
+			border-bottom-right-radius: .75em
 		}
 	}
 	p{
@@ -88,4 +89,19 @@ blockquote p{
 	background-color: #e4e4e4;
 	padding: 1em;
 	margin-bottom: 1em;
+}
+
+
+.pre_copy {
+	background: #6c757d;
+	border-top-left-radius: .75em;
+	border-top-right-radius: .75em;
+    margin-right: .75em;
+    margin-left: .75em
+}
+
+.pre_copy .fa-copy {
+	color: white !important;
+	border: black !important;
+	font-size: 0.8em;
 }

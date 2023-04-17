@@ -9,13 +9,13 @@ $ ->
   $('.published_at_date').datepicker({ dateFormat: 'yy-mm-dd' })
 
 
-  $('pre').prepend '<i class="far fa-copy float-end btn"> Copy</i>'
+  $('<div class="row"><div class="col pre_copy small"><i class="far fa-copy float-end btn"> Copy</i></div></div>').insertBefore 'pre'
 
   $('.snippet-clipboard-content').addClass 'snippet-clipboard-content-background'
 
 
   $('i.far.fa-copy').click ->
-    navigator.clipboard.writeText($(this).parent().text().slice(5))
+    navigator.clipboard.writeText($(this).parent().parent().next().text())
     $(this).text(" Copied")
 
   $('i.far.fa-copy').mouseout ->
