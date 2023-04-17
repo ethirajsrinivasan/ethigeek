@@ -31,7 +31,7 @@ gem 'jbuilder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'dalli'
+gem 'redis'
 
 gem 'faraday-retry'
 

@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://ethigeek.com"
+SitemapGenerator::Sitemap.default_host = "https://ethigeek.com"
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
@@ -34,6 +34,11 @@ SitemapGenerator::Sitemap.create do
   Project.active.find_each do |project|
     add portfolios_path(title: project.title), :lastmod => project.updated_at
   end
+
   add resume_path
+
+  add about_path
+
+  add gadgets_path
 
 end
