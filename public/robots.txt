@@ -4,5 +4,5 @@
 User-Agent: *
 Disallow:
 
-Sitemap: http://ethigeek.com/sitemap.xml.gz
+Sitemap: https://ethigeek.com/sitemap.xml.gz
 

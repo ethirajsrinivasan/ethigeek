@@ -28,7 +28,7 @@ SitemapGenerator::Sitemap.create do
   add "#{blogs_path}.html", changefreq: 'daily'
 
   Blog.published.find_each do |blog|
-    add "#{blog_path(blog)}.html", :lastmod => DateTime.now()
+    add "#{blog_path(blog)}.html", :lastmod => DateTime.now() , priority: 0.9
   end
 
   Project.active.find_each do |project|
