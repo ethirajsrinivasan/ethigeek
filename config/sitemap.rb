@@ -25,20 +25,20 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
 
-  add blogs_path, changefreq: 'daily'
+  add "#{blogs_path}.html", changefreq: 'daily'
 
   Blog.published.find_each do |blog|
-    add blog_path(blog), :lastmod => blog.updated_at
+    add "#{blog_path(blog)}.html", :lastmod => DateTime.now()
   end
 
   Project.active.find_each do |project|
-    add portfolios_path(title: project.title), :lastmod => project.updated_at
+    add "#{portfolios_path(title: project.title)}.html", :lastmod => project.updated_at
   end
 
   add resume_path
 
-  add about_path
+  add "#{about_path}.html"
 
-  add gadgets_path
+  add "#{gadgets_path}.html"
 
 end
