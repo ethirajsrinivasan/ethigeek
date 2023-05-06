@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   root "home#welcome"
   get "/about", action: :about, controller: 'home'
   get "/gadgets", action: :gadgets_and_accessories, controller: 'home'
-  get "/resume", to: redirect('/resume.pdf')
   get "/portfolios/:title", to: "home#show", as: 'portfolios'
   get "/portfolios_filter", to: "home#filter", as: 'portfolios_filter'
   resources :projects

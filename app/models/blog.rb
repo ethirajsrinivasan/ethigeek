@@ -26,6 +26,8 @@ class Blog < ApplicationRecord
                                               accept: 'application/vnd.github.v3.html')
       doc = Nokogiri::HTML(@content)
       doc.search('img').wrap("<div class='text-center'>")
+      first_paragraph = doc.at_css 'p'
+      first_paragraph.add_next_sibling("<p><div class='rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38'></div></p>")
       @content = doc.to_s
     end
   end

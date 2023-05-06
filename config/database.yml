@@ -25,7 +25,7 @@ test:
 
 production:
   <<: *default
-  database: ethigeek_production
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
+  database: ethigeek_development
+  username: postgres
+  password: postgres
 
