@@ -1,3 +1,4 @@
+<div class="rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38"></div>
 <div data-aos="fade-right" id="portfolio" class="scroll-section">
 	<div class="container">
 		<div  class="row justify-content-center">
@@ -14,7 +15,7 @@
 				<p class="text-justify"> I extensively built my knowledge on Machine learning through academic and professional work. Some of my machine learning projects are listed below</p>
 				<ul class="text-left">
 					<% @ml_projects.each do |project| %>
-				  		<li><%= link_to project.title, portfolios_path(title: project.title), target: "_blank" %></li>
+					<li><%= link_to project.title, portfolios_path(title: project.title) %></li>
 					<% end %>
 				</ul>
 			</div>
@@ -29,9 +30,9 @@
 			<div  class="col-md-6 my-auto col-sm-12">
 				<p class="text-justify">I developed few utility applications for my personal use. These small applications helped me to develop applications for a specific purpose. These applications are as follows</p>
 				<ul class="text-left">
-				  	<% @android_projects.each do |project| %>
-				  		<li><%= link_to project.title, portfolios_path(title: project.title), target: "_blank" %></li>
-				  	<% end %>
+					<% @android_projects.each do |project| %>
+					<li><%= link_to project.title, portfolios_path(title: project.title) %></li>
+					<% end %>
 				</ul>
 			</div>
 		</div>
@@ -44,11 +45,11 @@
 			</div>
 			<div class="col-md-6 my-auto col-sm-12">
 				<p class="text-justify"> I built knowledge on web technologies & frameworks and implemented state of the art technologies to improve the performance of web applications. As a hobby, I developed some of my own projects which can be seen in the links below</p>
-			    <ul class="text-left">
-			    	<% @web_projects.each do |project| %>
-			    	<li><%= link_to project.title, portfolios_path(title: project.title), target: "_blank" %></li>
-				  	<% end %>
-			    </ul>
+				<ul class="text-left">
+					<% @web_projects.each do |project| %>
+					<li><%= link_to project.title, portfolios_path(title: project.title) %></li>
+					<% end %>
+				</ul>
 			</div>
 		</div>
 		<br>
@@ -61,9 +62,9 @@
 			<div  class="col-md-6 my-auto col-sm-12">
 				<p class="text-justify">Good quality gems/libraries are sources to utilise our time effectively. I began my journey of open source contribution through these gems. I am the owner and collabarator for few gems. These gems are listed below</p>
 				<ul class="text-left">
-				  	<% @gems_projects.each do |project| %>
-				  		<li><%= link_to project.title, portfolios_path(title: project.title), target: "_blank" %></li>
-				  	<% end %>
+					<% @gems_projects.each do |project| %>
+					<li><%= link_to project.title, portfolios_path(title: project.title) %></li>
+					<% end %>
 				</ul>
 			</div>
 		</div>

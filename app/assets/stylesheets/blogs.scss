@@ -70,8 +70,18 @@
 	}
 }
 
-blockquote p{
+blockquote {
+
+	p {
 	text-align: center !important
+	}
+
+	a {
+	color: black !important
+	}
+	a:hover {
+	color: black !important
+	}
 }
 
 .blog_post_header {
