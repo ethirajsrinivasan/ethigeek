@@ -28,7 +28,21 @@ class Blog < ApplicationRecord
       doc.search('img').wrap("<div class='text-center'>")
       first_paragraph = doc.at_css 'p'
       first_paragraph.add_next_sibling("<p><div class='rvlqplr-placement-046628aa-40bc-4b18-bb04-e20223f91c38'></div></p>")
-      @content = doc.to_s
+      doc.css('blockquote').each do |blockquote|
+        if blockquote.text.strip.starts_with? 'http'
+          url = blockquote.text.strip
+          content = HTTParty.get(blockquote.text.strip)
+          meta_doc = Nokogiri::HTML(content.body)
+          title = meta_doc.css('title').text.strip
+          description = meta_doc.css('meta[name="description"]').present? ? meta_doc.css('meta[name="description"]').attr('content').value : ""
+          image = meta_doc.css('meta[property="og:image"]').present? ? meta_doc.css('meta[property="og:image"]').attr('content').value : ""
+          meta_content = get_meta_content(url,title,description.first(100),image)
+          blockquote.css('a').remove
+          blockquote.add_child(meta_content)
+          blockquote.add_child("<br>")
+        end
+      end
+      doc.to_s
     end
   end
 
@@ -37,7 +51,7 @@ class Blog < ApplicationRecord
       @content = @content || Octokit.contents("ethirajsrinivasan/blogs",
                                               path: content_url,
                                               accept: 'application/vnd.github.v3.html')
-      Nokogiri::HTML(@content).css("p").first.children.text
+      Nokogiri::HTML(@content).css("p").first.children.text.strip
     end
   end
 
@@ -49,6 +63,21 @@ class Blog < ApplicationRecord
 
   def previous
     self.class.published.where('"blogs"."published_at" > ?', published_at).last
+  end
+
+  def get_meta_content(url,title,description,image)
+    "<a href=#{url}>
+        <div id='blogs' class='row justify-content-center'>
+            <div class='col-md-8'>
+                <div class='border'>
+                    <img class='img-tile' src='#{image}'>
+                    <br>
+                    <div class='px-3 pt-1'>#{title}</div>
+                    <div class='fw-light px-3 py-1'><small>#{description}...</small></div>
+                </div>
+            </div>
+        </div>
+    </a>"
   end
 
 end

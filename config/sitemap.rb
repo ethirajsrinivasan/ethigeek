@@ -35,8 +35,6 @@ SitemapGenerator::Sitemap.create do
     add "#{portfolios_path(title: project.title)}.html", :lastmod => project.updated_at
   end
 
-  add resume_path
-
   add "#{about_path}.html"
 
   add "#{gadgets_path}.html"

@@ -1,4 +1,5 @@
 <% content_for :title,  @blog.title %>
+<% content_for :description,  @blog.short_content %>
 <% content_for :blog_title do %>
 <h3><%= @blog.title %></h3>
 <div class="published_at"><%= @blog.published_at.strftime("%b %d, %Y")%> &middot; <%= (@blog.content.split(" ").count * (0.8/300)).ceil %> min read</div>
