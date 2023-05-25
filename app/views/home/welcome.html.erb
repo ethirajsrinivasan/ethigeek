@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Ethiraj Srinivasan</title>
     <meta name="description" content="Hi, this is Ethiraj, I'm a software developer, amateur cook, avid traveler and bibliophile hailing from South Indian Metropolitan City. I currently work as a Expert Data Engineer at Shopee living in the Lion City."/>
     <meta property="og:image" content="<%=header_image%>"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="C05472F52FB3614FFD93C4AB9A379B92" />
-    <title><%= content_for?(:title) ? yield(:title) : "ethigeek" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Ethiraj Srinivasan" %></title>
     <%= stylesheet_link_tag    "application" %>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-    <%= javascript_include_tag "application", 'data-turbolinks-track' => true, cache: true %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true%>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
     <script src="https://cdn.rvlqplr.com/engine/engine-entry.js?pid=0a33716f-efb9-4dac-a8ed-8fae94f49289" async></script>
@@ -64,7 +63,6 @@
         </div>
       </div>
     </section>
-    <% cache "welcome", expires_in: 24.hours do %>
     <%= render "shared/about" %>
     <%= render "shared/portfolio" %>
     <%= render "shared/from_the_blog" %>
@@ -81,7 +79,6 @@
         </ul>
       </div>
     </footer>
-    <% end %>
   </body>
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>

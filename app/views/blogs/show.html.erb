@@ -5,7 +5,6 @@
 <div class="published_at"><%= @blog.published_at.strftime("%b %d, %Y")%> &middot; <%= (@blog.content.split(" ").count * (0.8/300)).ceil %> min read</div>
 <% end %>
 <br>
-<% cache @blog do %>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -52,4 +51,3 @@
 </div>
 </div>
 </div>
-<% end %>
