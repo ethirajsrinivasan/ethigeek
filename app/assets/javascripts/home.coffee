@@ -19,4 +19,9 @@ $ ->
   $('.navbar-toggler-icon').click ->
 	  $nav = $('.navbar')
 	  $nav.toggleClass 'nav-icon-background'
+
+
+if !window.location.pathname.endsWith('.html')
+  if window.location.pathname.localeCompare("/") != 0
+    window.location.pathname = window.location.pathname.replace(/\.[^/.]+$/, '') + '.html'
      
