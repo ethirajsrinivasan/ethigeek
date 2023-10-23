@@ -40,6 +40,10 @@ class Blog < ApplicationRecord
           blockquote.add_child("<br>")
         end
       end
+      anchor_tags = doc.css('a')
+      anchor_tags.each do |anchor_tag|
+        anchor_tag['target'] = '_blank'
+      end
       doc.to_s
     end
   end
