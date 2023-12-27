@@ -10,6 +10,7 @@ class Blog < ApplicationRecord
   self.per_page = 9
   default_scope { order(published_at: :desc) }
   scope :published, -> {where(state: "published")}
+  scope :tech, -> {where(blog_type: "tech")}
 
   #
   # Fetches the content from the github
@@ -60,11 +61,11 @@ class Blog < ApplicationRecord
 
 
   def next
-    self.class.published.where('"blogs"."published_at" < ?', published_at).first
+    self.class.published.where('"blogs"."published_at" < ?', published_at).where(blog_type:blog_type).first
   end
 
   def previous
-    self.class.published.where('"blogs"."published_at" > ?', published_at).last
+    self.class.published.where('"blogs"."published_at" > ?', published_at).where(blog_type:blog_type).last
   end
 
   def get_meta_content(url,title,description,image)
