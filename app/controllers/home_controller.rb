@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @ml_projects = Project.ml
     @android_projects = Project.android
     @web_projects = Project.web
-    @blogs = Blog.published.first(3)
+    @blogs = Blog.published.tech.first(3)
     render "welcome", layout: false
   end
 

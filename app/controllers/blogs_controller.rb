@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.published.paginate(:page => params[:page]).order('id DESC')
+    @blogs = Blog.published.tech.paginate(:page => params[:page]).order('id DESC')
   end
 
   def show_all
@@ -84,7 +84,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :state, :content_url, :published_at, :slug, :picture)
+      params.require(:blog).permit(:title, :state, :content_url, :published_at, :slug, :picture,:blog_type,:picture_alt)
     end
 
     def refined_blog_params

@@ -31,6 +31,11 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :blog_type %>
+    <%= form.select :blog_type, ['tech', 'finance','travel','general'],class: "form-control" %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :content_url %>
     <%= form.text_field :content_url,class: "form-control" %>
   </div>
