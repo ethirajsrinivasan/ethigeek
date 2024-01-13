@@ -1,3 +1,4 @@
+require 'open-uri'
 class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
@@ -26,6 +27,8 @@ class Blog < ApplicationRecord
                                               path: content_url,
                                               accept: 'application/vnd.github.v3.html')
       doc = Nokogiri::HTML(@content)
+      assets_folder = Rails.root.join('app', 'assets', 'images')
+      doc = download_and_replace_images(doc,assets_folder)
       doc.search('img').wrap("<div class='text-center'>")
       doc.css('blockquote').each do |blockquote|
         if blockquote.text.strip.starts_with? 'http'
@@ -81,6 +84,36 @@ class Blog < ApplicationRecord
             </div>
         </div>
     </a>"
+  end
+
+  def download_and_replace_images(doc, assets_folder)
+
+    # Use a regular expression to match URLs with the specified domain
+    url_pattern = /https:\/\/private-user-images\.githubusercontent\.com\/[^\s'"]+/
+
+    doc.css('[src], [href]').each do |element|
+      # Match the URL pattern in src or href attributes
+      matches = element['src'].to_s.scan(url_pattern) + element['href'].to_s.scan(url_pattern)
+
+      matches.flatten.each do |url|
+        # Extract image file name from the URL
+        image_name =  "github_" + File.basename(url).split("?").first
+
+        # Construct the destination path in the Rails assets folder
+        destination_path = File.join(assets_folder, image_name)
+
+        # Download the image and save it to the destination path
+        open(destination_path, 'wb') do |file|
+          file << URI.open(url).read
+        end
+
+        puts "Image downloaded and saved to #{destination_path}"
+
+        # Update the src or href attribute with the new Rails assets path
+        element['src'] = element['href'] = "/assets/#{image_name}"
+      end
+    end
+    return doc
   end
 
 end
