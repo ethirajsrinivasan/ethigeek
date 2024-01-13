@@ -1,4 +1,6 @@
 require 'open-uri'
+require 'fileutils'
+
 class Blog < ApplicationRecord
   extend FriendlyId
   friendly_id :title, use: [:slugged, :finders]
@@ -97,7 +99,8 @@ class Blog < ApplicationRecord
 
       matches.flatten.each do |url|
         # Extract image file name from the URL
-        image_name =  "github_" + File.basename(url).split("?").first
+        image_name = "github_" + File.basename(url).split("?").first
+
 
         # Construct the destination path in the Rails assets folder
         destination_path = File.join(assets_folder, image_name)
